@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Code</title>
+    <url>/2021/04/18/Code/</url>
+    <content><![CDATA[<ul>
+<li>记录日常刷题的内容</li>
+</ul>
+<a id="more"></a>
+
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>java 刷题记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CondaCMD</title>
+    <url>/2021/04/18/CondaCMD/</url>
+    <content><![CDATA[<ul>
+<li>记录常用的Conda命令</li>
+</ul>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>CMD</category>
+      </categories>
+      <tags>
+        <tag>Conda CMD Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IceCream</title>
+    <url>/2021/04/18/IceCream/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>照片</category>
+      </categories>
+      <tags>
+        <tag>photo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaBasic</title>
+    <url>/2021/04/18/JavaBasic/</url>
+    <content><![CDATA[<ul>
+<li>java基础知识补足，不系统，随想随记</li>
+</ul>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LinuxCMD</title>
+    <url>/2021/04/18/LinuxCMD/</url>
+    <content><![CDATA[<ul>
+<li>记录常用的Linux命令</li>
+</ul>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>CMD</category>
+      </categories>
+      <tags>
+        <tag>Linux CMD</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ML</title>
+    <url>/2021/04/18/ML/</url>
+    <content><![CDATA[<ul>
+<li>跟台大李宏毅老师的课程学机器学习课程</li>
+<li>跟jure大神学图机器学习课程</li>
+</ul>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>ML</category>
+      </categories>
+      <tags>
+        <tag>ML Basic</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python</title>
+    <url>/2021/04/18/Python/</url>
+    <content><![CDATA[<ul>
+<li>Python基础记录</li>
+<li>没系统学过python，用到什么查什么，哪里不会点哪里</li>
+</ul>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python Basic</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring</title>
+    <url>/2021/04/18/Spring/</url>
+    <content><![CDATA[<ul>
+<li>记录学习spring的记录</li>
+<li>从0开始</li>
+</ul>
+<a id="more"></a>
+
+
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>命令行代码记录</title>
+    <url>/2021/02/09/%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h3 id="hexo-代码记录"><a href="#hexo-代码记录" class="headerlink" title="hexo 代码记录"></a>hexo 代码记录</h3><ul>
+<li>init</li>
+<li>new</li>
+<li>deploy</li>
+</ul>
+<a id="more"></a>
+
+
+
+<p>conda 安装 torch 添加以下源</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud&#x2F;pytorch</span><br></pre></td></tr></table></figure>
+
+
+<p>macOS 解压jar包命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">命令格式：tar -zxvf &lt;源jar文件&gt; -C &lt;目标目录&gt; </span><br><span class="line"></span><br><span class="line">-z：有gzip属性的,可选</span><br><span class="line"></span><br><span class="line">-x：解压，必须</span><br><span class="line"></span><br><span class="line">-v：显示所有过程，可选</span><br><span class="line"></span><br><span class="line">-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接jar名，必须</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">-C：指定目标目录，必须预先存在 ，可选，如果没有则解压到当前目录</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line"></span><br><span class="line">**tar -zxvf demo.jar -C demo**  # 目标目录必须预先存在</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">**tar -zxvf demo.jar**  省略目标目录，会解压到当前工作目录下</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>命令行 工作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 基本命令</title>
+    <url>/2021/04/18/hexoCommandLine/</url>
+    <content><![CDATA[<p>记录hexo的命令行代码</p>
+<a id="more"></a>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>CMD</category>
+      </categories>
+      <tags>
+        <tag>HEXO CMD BLOG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法分析与设计</title>
+    <url>/2021/04/18/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<ul>
+<li>算法分析与设计课程记录</li>
+</ul>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>数据结构 算法 课程记录</tag>
+      </tags>
+  </entry>
+</search>
