@@ -69,7 +69,8 @@
         <category>CMD</category>
       </categories>
       <tags>
-        <tag>Linux CMD</tag>
+        <tag>Linux</tag>
+        <tag>CMD</tag>
       </tags>
   </entry>
   <entry>
@@ -85,7 +86,8 @@
         <category>ML</category>
       </categories>
       <tags>
-        <tag>ML Basic</tag>
+        <tag>ML</tag>
+        <tag>Basic</tag>
       </tags>
   </entry>
   <entry>
@@ -101,7 +103,8 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>Python Basic</tag>
+        <tag>Basic</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -120,6 +123,23 @@
       </categories>
       <tags>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 基本命令</title>
+    <url>/2021/04/18/hexoCommandLine/</url>
+    <content><![CDATA[<p>记录hexo的命令行代码</p>
+<a id="more"></a>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>CMD</category>
+      </categories>
+      <tags>
+        <tag>HEXO CMD BLOG</tag>
       </tags>
   </entry>
   <entry>
@@ -143,23 +163,6 @@
 ]]></content>
       <tags>
         <tag>命令行 工作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 基本命令</title>
-    <url>/2021/04/18/hexoCommandLine/</url>
-    <content><![CDATA[<p>记录hexo的命令行代码</p>
-<a id="more"></a>
-
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>CMD</category>
-      </categories>
-      <tags>
-        <tag>HEXO CMD BLOG</tag>
       </tags>
   </entry>
   <entry>
