@@ -43,21 +43,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaBasic</title>
-    <url>/2021/04/18/JavaBasic/</url>
-    <content><![CDATA[<ul>
-<li>java基础知识补足，不系统，随想随记</li>
-</ul>
-<a id="more"></a>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LinuxCMD</title>
     <url>/2021/04/18/LinuxCMD/</url>
     <content><![CDATA[<ul>
@@ -71,6 +56,21 @@
       <tags>
         <tag>Linux</tag>
         <tag>CMD</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaBasic</title>
+    <url>/2021/04/18/JavaBasic/</url>
+    <content><![CDATA[<ul>
+<li>java基础知识补足，不系统，随想随记</li>
+</ul>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -88,23 +88,6 @@
       <tags>
         <tag>ML</tag>
         <tag>Basic</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python</title>
-    <url>/2021/04/18/Python/</url>
-    <content><![CDATA[<ul>
-<li>Python基础记录</li>
-<li>没系统学过python，用到什么查什么，哪里不会点哪里</li>
-</ul>
-<a id="more"></a>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Basic</tag>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -143,26 +126,20 @@
       </tags>
   </entry>
   <entry>
-    <title>命令行代码记录</title>
-    <url>/2021/02/09/%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h3 id="hexo-代码记录"><a href="#hexo-代码记录" class="headerlink" title="hexo 代码记录"></a>hexo 代码记录</h3><ul>
-<li>init</li>
-<li>new</li>
-<li>deploy</li>
+    <title>Python</title>
+    <url>/2021/04/18/Python/</url>
+    <content><![CDATA[<ul>
+<li>Python基础记录</li>
+<li>没系统学过python，用到什么查什么，哪里不会点哪里</li>
 </ul>
 <a id="more"></a>
-
-
-
-<p>conda 安装 torch 添加以下源</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud&#x2F;pytorch</span><br></pre></td></tr></table></figure>
-
-
-<p>macOS 解压jar包命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">命令格式：tar -zxvf &lt;源jar文件&gt; -C &lt;目标目录&gt; </span><br><span class="line"></span><br><span class="line">-z：有gzip属性的,可选</span><br><span class="line"></span><br><span class="line">-x：解压，必须</span><br><span class="line"></span><br><span class="line">-v：显示所有过程，可选</span><br><span class="line"></span><br><span class="line">-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接jar名，必须</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">-C：指定目标目录，必须预先存在 ，可选，如果没有则解压到当前目录</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line"></span><br><span class="line">**tar -zxvf demo.jar -C demo**  # 目标目录必须预先存在</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">**tar -zxvf demo.jar**  省略目标目录，会解压到当前工作目录下</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
       <tags>
-        <tag>命令行 工作</tag>
+        <tag>Basic</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
