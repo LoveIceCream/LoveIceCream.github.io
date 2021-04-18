@@ -43,6 +43,21 @@
       </tags>
   </entry>
   <entry>
+    <title>JavaBasic</title>
+    <url>/2021/04/18/JavaBasic/</url>
+    <content><![CDATA[<ul>
+<li>java基础知识补足，不系统，随想随记</li>
+</ul>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LinuxCMD</title>
     <url>/2021/04/18/LinuxCMD/</url>
     <content><![CDATA[<ul>
@@ -56,21 +71,6 @@
       <tags>
         <tag>Linux</tag>
         <tag>CMD</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaBasic</title>
-    <url>/2021/04/18/JavaBasic/</url>
-    <content><![CDATA[<ul>
-<li>java基础知识补足，不系统，随想随记</li>
-</ul>
-<a id="more"></a>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -88,6 +88,23 @@
       <tags>
         <tag>ML</tag>
         <tag>Basic</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python</title>
+    <url>/2021/04/18/Python/</url>
+    <content><![CDATA[<ul>
+<li>Python基础记录</li>
+<li>没系统学过python，用到什么查什么，哪里不会点哪里</li>
+</ul>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Basic</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -123,23 +140,6 @@
       </categories>
       <tags>
         <tag>HEXO CMD BLOG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python</title>
-    <url>/2021/04/18/Python/</url>
-    <content><![CDATA[<ul>
-<li>Python基础记录</li>
-<li>没系统学过python，用到什么查什么，哪里不会点哪里</li>
-</ul>
-<a id="more"></a>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Basic</tag>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
