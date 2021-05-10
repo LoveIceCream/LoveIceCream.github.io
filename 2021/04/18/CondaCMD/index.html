@@ -229,7 +229,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>8 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>376 字</span>
         </span>
     
     
@@ -254,6 +254,82 @@
 <li>记录常用的Conda命令</li>
 </ul>
 <a id="more"></a>
+
+
+
+<h3 id="虚拟环境管理"><a href="#虚拟环境管理" class="headerlink" title="虚拟环境管理"></a>虚拟环境管理</h3><ul>
+<li>查看环境</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda info -e</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建环境</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 创建的时候指定环境名称 </span><br><span class="line">conda create -n test_py3.4</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 创建的时候指定同时安装的包及版本</span><br><span class="line">conda create -n test_py3.4 python&#x3D;3.4 pandas</span><br></pre></td></tr></table></figure>
+<ul>
+<li>激活环境</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate test_py3.4</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>disable环境</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>删除环境</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda remove -n tf --all</span><br><span class="line">&#x2F;&#x2F; </span><br><span class="line">conda env remove -n tf</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>拷贝环境</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 本机</span><br><span class="line">conda create --clone tensorflow --name tf</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 从其他服务器 从服务器A 拷贝 pythonenv 环境到 服务器B</span><br><span class="line">&#x2F;&#x2F; 1.先在A服务器 激活pythonenv环境</span><br><span class="line">conda activate pythonenv</span><br><span class="line">&#x2F;&#x2F; 2.在A服务器  导出移植文件 导出文件可随意命名</span><br><span class="line">conda env export &gt; pythonenv.yml</span><br><span class="line">&#x2F;&#x2F; 3.将文件从A服务器 拷贝 到B服务器</span><br><span class="line">&#x2F;&#x2F; 4.在B服务器上创建环境</span><br><span class="line">conda env create -f pythonenv.yaml</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; tips:</span><br><span class="line">&#x2F;&#x2F; 1.如果移植base环境的话，需要更名，或者备份原来的，具体操作需要注意</span><br><span class="line">&#x2F;&#x2F; 2. pythonenv.yaml 里面可以编辑 可以编辑里面的一些依赖或者名字</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="包管理"><a href="#包管理" class="headerlink" title="包管理"></a>包管理</h3><ul>
+<li>查看已安装的包</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 查看当前环境的包列表</span><br><span class="line">conda list </span><br><span class="line">&#x2F;&#x2F; 查看指定环境的包列表</span><br><span class="line">conda list -n  env_name</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>查找包</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda search pkg_name</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>安装包</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda install matplotlib</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>更新包</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda upgrade --all</span><br><span class="line"></span><br><span class="line">conda upgrade numpy</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>删除包</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove matplotlib </span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>修改镜像源</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;free&#x2F;</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li></li>
+</ul>
 
         </div>
 
@@ -420,7 +496,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">虚拟环境管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">包管理</span></a></li></ol>
     </div>
 </div>
         </aside>
