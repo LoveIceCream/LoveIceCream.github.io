@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Code</title>
-    <url>/2021/04/18/Code/</url>
-    <content><![CDATA[<ul>
-<li>记录日常刷题的内容</li>
-</ul>
-<a id="more"></a>
-
-]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>刷题记录</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CondaCMD</title>
     <url>/2021/04/18/CondaCMD/</url>
     <content><![CDATA[<ul>
@@ -111,6 +94,41 @@
       </tags>
   </entry>
   <entry>
+    <title>IceCream</title>
+    <url>/2021/04/18/IceCream/</url>
+    <content><![CDATA[<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210420234223.JPG"
+                      alt="冰淇淋"
+                ></p>
+]]></content>
+      <categories>
+        <category>照片</category>
+      </categories>
+      <tags>
+        <tag>PHOTO</tag>
+        <tag>TRAVEL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Code</title>
+    <url>/2021/04/18/Code/</url>
+    <content><![CDATA[<ul>
+<li>记录日常刷题的内容</li>
+</ul>
+<a id="more"></a>
+
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>刷题记录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>IDEA</title>
     <url>/2021/04/19/IDEA/</url>
     <content><![CDATA[<ul>
@@ -137,21 +155,73 @@
       </tags>
   </entry>
   <entry>
-    <title>IceCream</title>
-    <url>/2021/04/18/IceCream/</url>
-    <content><![CDATA[<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210420234223.JPG"
-                      alt="冰淇淋"
-                ></p>
+    <title>LinuxCMD</title>
+    <url>/2021/04/18/LinuxCMD/</url>
+    <content><![CDATA[<ul>
+<li>记录常用的Linux命令</li>
+</ul>
+<a id="more"></a>
 ]]></content>
       <categories>
-        <category>照片</category>
+        <category>CMD</category>
       </categories>
       <tags>
-        <tag>PHOTO</tag>
-        <tag>TRAVEL</tag>
+        <tag>CMD</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ML</title>
+    <url>/2021/04/18/ML/</url>
+    <content><![CDATA[<ul>
+<li>跟台大李宏毅老师的课程学机器学习课程</li>
+<li>跟jure大神学图机器学习课程</li>
+</ul>
+<a id="more"></a>
+]]></content>
+      <categories>
+        <category>ML</category>
+      </categories>
+      <tags>
+        <tag>ML</tag>
+        <tag>Basic</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python</title>
+    <url>/2021/04/18/Python/</url>
+    <content><![CDATA[<ul>
+<li>Python基础记录</li>
+<li>没系统学过python，用到什么查什么，哪里不会点哪里</li>
+</ul>
+<a id="more"></a>
+
+
+
+<h4 id="项目中，with-open-打开文件使用相对路径"><a href="#项目中，with-open-打开文件使用相对路径" class="headerlink" title="项目中，with open 打开文件使用相对路径"></a>项目中，with open 打开文件使用相对路径</h4><ul>
+<li>目录结构</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210513144554.png"
+                      alt="截屏2021-05-13 下午2.45.51"
+                ></p>
+<ul>
+<li>在服务器上运行当前项目 是在 app.py 所在文件夹运行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python app.py</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其子文件夹内的文件 如/model/autohome/utils.py 里，使用相对路径，不能通过 ./data/word_to_id.txt 找到该文件。只能通过 ./model/autohome/data/word_to_id.txt </li>
+<li>即 相对路径从运行项目的目录开始算，很坑</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Basic</tag>
       </tags>
   </entry>
   <entry>
@@ -221,56 +291,6 @@
       </tags>
   </entry>
   <entry>
-    <title>LinuxCMD</title>
-    <url>/2021/04/18/LinuxCMD/</url>
-    <content><![CDATA[<ul>
-<li>记录常用的Linux命令</li>
-</ul>
-<a id="more"></a>
-]]></content>
-      <categories>
-        <category>CMD</category>
-      </categories>
-      <tags>
-        <tag>CMD</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ML</title>
-    <url>/2021/04/18/ML/</url>
-    <content><![CDATA[<ul>
-<li>跟台大李宏毅老师的课程学机器学习课程</li>
-<li>跟jure大神学图机器学习课程</li>
-</ul>
-<a id="more"></a>
-]]></content>
-      <categories>
-        <category>ML</category>
-      </categories>
-      <tags>
-        <tag>ML</tag>
-        <tag>Basic</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python</title>
-    <url>/2021/04/18/Python/</url>
-    <content><![CDATA[<ul>
-<li>Python基础记录</li>
-<li>没系统学过python，用到什么查什么，哪里不会点哪里</li>
-</ul>
-<a id="more"></a>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Basic</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring</title>
     <url>/2021/04/18/Spring/</url>
     <content><![CDATA[<ul>
@@ -333,8 +353,10 @@
 </li>
 </ul>
 <h2 id="Asymptotic-Notation"><a href="#Asymptotic-Notation" class="headerlink" title="Asymptotic Notation"></a>Asymptotic Notation</h2><ul>
-<li>渐进表示法</li>
-<li>算法分析<ul>
+<li><p>渐进表示法</p>
+</li>
+<li><p>算法分析</p>
+<ul>
 <li> 时间复杂度：O(n)，O($n^2$)，O($nlgn$)</li>
 <li>空间复杂度<ul>
 <li>输入规模</li>
@@ -344,7 +366,168 @@
 </li>
 </ul>
 </li>
+<li><p>大O表示法：</p>
+<ul>
+<li><p>算法的时间复杂度通常用大O符号表述，定义为T[n] = O(f(n))。称函数T(n)以f(n)为界或者称T(n)受限于f(n)。</p>
+</li>
+<li><p> 如果一个问题的规模是n，解这一问题的某一算法所需要的时间为T(n)。T(n)称为这一算法的“时间复杂度”。当输入量n逐渐加大时，时间复杂度的极限情形称为算法的“渐近时间复杂度”。</p>
+</li>
+<li><p>举个例子，令$f(n)=2n^2+3n+5$ ,$O(f(n))=O(2n^2+3n+5)=O(n^2)$</p>
+</li>
+<li><p>$O(1)$</p>
+</li>
+<li><p>$O(n)$</p>
+</li>
+<li><p>$O(n^2)$</p>
+</li>
+<li><p> Master Theorem解决递归复杂度求解</p>
+</li>
 </ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518163811.png"
+                      alt="截屏2021-05-18 下午4.37.55"
+                ></p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="../../../../Library/Application%20Support/typora-user-images/%E6%88%AA%E5%B1%8F2021-05-18%20%E4%B8%8B%E5%8D%884.38.54.png"
+                      alt="截屏2021-05-18 下午4.38.54"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518163921.png"
+                      alt="截屏2021-05-18 下午4.39.18"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518163940.png"
+                      alt="截屏2021-05-18 下午4.39.34"
+                ></p>
+<h3 id="时间复杂度分析例题"><a href="#时间复杂度分析例题" class="headerlink" title="时间复杂度分析例题"></a>时间复杂度分析例题</h3><ul>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void fun(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int i&#x3D;0,s&#x3D;0;</span><br><span class="line">    while(s&lt;n)</span><br><span class="line">    &#123;</span><br><span class="line">        ++i;</span><br><span class="line">        s&#x3D;s+i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518174731.png"
+                      alt="截屏2021-05-18 下午5.47.27"
+                ></p>
+</li>
+<li></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for(i&#x3D;1;i&lt;n;i&#x3D;2*i)</span><br><span class="line">    std::cout&lt;&lt;&quot;i&#x3D;&quot;&lt;&lt;i&lt;&lt;std::endl;</span><br></pre></td></tr></table></figure>
+
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518175709.png"
+                      alt="截屏2021-05-18 下午5.57.06"
+                ></p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int func(int n)</span><br><span class="line">&#123;</span><br><span class="line">    if(n&lt;&#x3D;1)</span><br><span class="line">        return 1;   &#x2F;&#x2F;①</span><br><span class="line">    else</span><br><span class="line">        return n*func(n-1);   &#x2F;&#x2F;②</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518175740.png"
+                      alt="截屏2021-05-18 下午5.57.35"
+                ></p>
+</li>
+</ul>
+<ul>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518175800.png"
+                      alt="截屏2021-05-18 下午5.57.56"
+                ></p>
+</li>
+</ul>
+<ul>
+<li><strong>设计一个算法，用不多于3n/2的平均比较次数，在数组A[0,…,n-1]中找出最大值和最小值的元素</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;如果找最大值时遍历一次，最小值时遍历一次，则需要比较2n，所以尽量就遍历一次</span><br><span class="line">void MaxandMin(int A[],int n,int &amp;max,int &amp;min)</span><br><span class="line">&#123;</span><br><span class="line">    max&#x3D;min&#x3D;A[0];</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(A[i]&gt;max) max&#x3D;A[i];</span><br><span class="line">        if(A[i]&lt;min) min&#x3D;A[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518175843.png"
+                      alt="截屏2021-05-18 下午5.58.40"
+                ></p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void fun()</span><br><span class="line">&#123;</span><br><span class="line">   int i&#x3D;1,k&#x3D;0,n&#x3D;10;</span><br><span class="line">   while(i&lt;&#x3D;n-1)</span><br><span class="line">   &#123;</span><br><span class="line">       k+&#x3D;10*i;</span><br><span class="line">       ++i;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">显然看出可以改写为for(i&#x3D;1;i&lt;&#x3D;n-1;++i) ，故时间复杂度为O(n)</span><br></pre></td></tr></table></figure></li>
+<li></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void fun(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int i&#x3D;1,k&#x3D;0;</span><br><span class="line">    do</span><br><span class="line">    &#123;</span><br><span class="line">    	k+&#x3D;10*i;</span><br><span class="line">        ++i;</span><br><span class="line">    &#125;while(i&#x3D;&#x3D;n)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">显然i!&#x3D;n时跳出循环，如：n&#x3D;100，i&#x3D;1，仅循环一次，故时间复杂度O(1)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void fun(n)</span><br><span class="line">&#123;</span><br><span class="line">    int i&#x3D;1,j&#x3D;0;</span><br><span class="line">    while(i+j&lt;&#x3D;n)</span><br><span class="line">        if(i&gt;j)</span><br><span class="line">            ++j;</span><br><span class="line">    	else</span><br><span class="line">            ++i;</span><br><span class="line">&#125;</span><br><span class="line">可以写几个例子，1&lt;&#x3D;n i&#x3D;1,j&#x3D;1; 2&lt;&#x3D;n i&#x3D;2,j&#x3D;1 ;3&lt;&#x3D;n i&#x3D;2,j&#x3D;2 ... 显然时间复杂度O(n)</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void fun(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int x&#x3D;n,y&#x3D;0;</span><br><span class="line">    while(x&gt;&#x3D;(y+1)*(y+1))</span><br><span class="line">        ++y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">同样写几个例子，x&gt;&#x3D;1×1 y&#x3D;1 ; x&gt;&#x3D;2×2 y&#x3D;2 ... 显然时间复杂度O( 𝑛√</span><br><span class="line">n</span><br><span class="line"> )</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void fun(n)</span><br><span class="line">&#123;</span><br><span class="line">    i&#x3D;1;</span><br><span class="line">    while(i&lt;&#x3D;n)</span><br><span class="line">        i&#x3D;i*2</span><br><span class="line">&#125;</span><br><span class="line">同样可以写例子，显然时间复杂度为O( 𝑙𝑜𝑔2𝑛 )</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void fun(n)</span><br><span class="line">&#123;</span><br><span class="line">    i&#x3D;1;</span><br><span class="line">    while(i&lt;&#x3D;n)</span><br><span class="line">        i&#x3D;i*3</span><br><span class="line">&#125;</span><br><span class="line">显然时间复杂度为O( 𝑙𝑜𝑔3𝑛 )</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li><strong>假设n为2的乘幂，求以下时间复杂度</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void counter()</span><br><span class="line">&#123;</span><br><span class="line">    int n,x,count;</span><br><span class="line">    std::cout&lt;&lt;&quot;n:&quot;;</span><br><span class="line">    std::cin&gt;&gt;n;</span><br><span class="line">    count&#x3D;0;</span><br><span class="line">    x&#x3D;2;</span><br><span class="line">    while(x&lt;n&#x2F;2)</span><br><span class="line">    &#123;</span><br><span class="line">        x&#x3D;2*x;</span><br><span class="line">        ++count;</span><br><span class="line">    &#125;</span><br><span class="line">    std::cout&lt;&lt;count&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518180222.png"
+                      alt="截屏2021-05-18 下午6.02.18"
+                ></p>
+<ul>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518180237.png"
+                      alt="截屏2021-05-18 下午6.02.34"
+                ></p>
+</li>
+</ul>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void sort(int j,int n)</span><br><span class="line">&#123;</span><br><span class="line">    int i,temp;</span><br><span class="line">    if(j&lt;n)</span><br><span class="line">    &#123;</span><br><span class="line">        for(i&#x3D;j;i&lt;&#x3D;n;++i)</span><br><span class="line">            if(a[i]&lt;a[j])</span><br><span class="line">                swap(a[i],a[j]);   &#x2F;&#x2F;本函数时间复杂度O(1)</span><br><span class="line">        ++j;</span><br><span class="line">        sort(j,n)   &#x2F;&#x2F;递归调用</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518180303.png"
+                      alt="截屏2021-05-18 下午6.03.01"
+                ></p>
+<ul>
+<li><strong>设计下列问题算法，分析其最坏情况的时间复杂度</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(1)在数组A[0,...,n-1]中查找值为k的元素，若找到，则输出其位置i(i为数组下标)；否则输出-1为坐标</span><br><span class="line"></span><br><span class="line">int findK(int A[],int k)   &#x2F;&#x2F;这里假设A中元素都是int型</span><br><span class="line">&#123;</span><br><span class="line">    int i &#x3D;0;</span><br><span class="line">    while(i&lt;n&amp;&amp;A[i]!&#x3D;k)</span><br><span class="line">        i++;</span><br><span class="line">    return i;  &#x2F;&#x2F;找到了</span><br><span class="line">    else</span><br><span class="line">        return -1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">最坏情况：就是遍历一遍后查不到k，比较了n+1次，故时间复杂度O(n)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(2)在数组A[0,...,n-1]中找出元素的最大值和次最大值</span><br><span class="line"></span><br><span class="line">void mxa(int A[],int M, int m)    &#x2F;&#x2F;M为最大值，m为次大值</span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    M&#x3D;m&#x3D;MIN;   &#x2F;&#x2F;设MIN为已定义常量，比A[]中所有元素都小</span><br><span class="line">    for(i&#x3D;0;i&lt;n;i++)</span><br><span class="line">    &#123;	&#x2F;&#x2F;find M</span><br><span class="line">    	if(A[i]&gt;M) M&#x3D;A[i];</span><br><span class="line">    &#125;</span><br><span class="line">    for(i&#x3D;0;i&lt;n;i++)</span><br><span class="line">    &#123;	&#x2F;&#x2F;find m</span><br><span class="line">        if(A[i]!&#x3D;M&amp;&amp;A[i]&gt;m) m&#x3D;A[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">最坏情况：各来一次遍历，并都是最后找到，一共比较了2n-2次，故时间复杂度O(n)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
 <h1 id="常见数据结构与算法的时间、空间复杂度总结"><a href="#常见数据结构与算法的时间、空间复杂度总结" class="headerlink" title="常见数据结构与算法的时间、空间复杂度总结"></a>常见数据结构与算法的时间、空间复杂度总结</h1><h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><ul>
 <li>知乎上搜到的比较全的图</li>
 <li>图片转自：<a class="link"   href="https://zhuanlan.zhihu.com/p/143358017" >https://zhuanlan.zhihu.com/p/143358017<i class="fas fa-external-link-alt"></i></a></li>
@@ -379,12 +562,122 @@
                      data-src="https://pic2.zhimg.com/80/v2-c9cd63215e0c2bf8a833e26c946d0745_1440w.jpg"
                      
                 ></p>
-<h2 id="常用算法复杂度分析"><a href="#常用算法复杂度分析" class="headerlink" title="常用算法复杂度分析"></a>常用算法复杂度分析</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><h3 id="堆-1"><a href="#堆-1" class="headerlink" title="堆"></a>堆</h3><ul>
-<li>Heapify()</li>
-<li>BuildHeap()</li>
-<li>Heapsort()</li>
+<h2 id="常用算法复杂度分析"><a href="#常用算法复杂度分析" class="headerlink" title="常用算法复杂度分析"></a>常用算法复杂度分析</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><ul>
+<li>插入排序，逐项加入到排序的部分中，从小到大排序</li>
+<li>时间复杂度 <ul>
+<li>最好 $O(n)$</li>
+<li>最差$O(n^2)$</li>
+<li>平均$O(n^2)$</li>
 </ul>
-<h3 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h3><h3 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h3><h3 id="线性时间复杂度-计数排序"><a href="#线性时间复杂度-计数排序" class="headerlink" title="线性时间复杂度-计数排序"></a>线性时间复杂度-计数排序</h3><h3 id="基数排序Radix-Sort"><a href="#基数排序Radix-Sort" class="headerlink" title="基数排序Radix Sort"></a>基数排序Radix Sort</h3><ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for (int i &#x3D; 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">    int j &#x3D; i;</span><br><span class="line">    while (j &gt; 0)&#123;</span><br><span class="line">        if (arr[j] &lt; arr[j-1])&#123;</span><br><span class="line">            int temp ;</span><br><span class="line">            temp &#x3D; arr[j];</span><br><span class="line">            arr[j] &#x3D; arr[j-1];</span><br><span class="line">            arr[j-1] &#x3D; temp;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><ul>
+<li>归并排序（MERGE-SORT）是利用<strong>归并</strong>的思想实现的排序方法，该算法采用经典的<strong>分治</strong>（divide-and-conquer）策略（分治法将问题<strong>分</strong>(divide)成一些小的问题然后递归求解，而**治(conquer)**的阶段则将分的阶段得到的各答案”修补”在一起，即分而治之)。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201430.png"
+                      alt="1024555-20161218163120151-452283750"
+                ></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package sortdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by chengxiao on 2016&#x2F;12&#x2F;8.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class MergeSort &#123;</span><br><span class="line">    public static void main(String []args)&#123;</span><br><span class="line">        int []arr &#x3D; &#123;9,8,7,6,5,4,3,2,1&#125;;</span><br><span class="line">        sort(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sort(int []arr)&#123;</span><br><span class="line">        int []temp &#x3D; new int[arr.length];&#x2F;&#x2F;在排序前，先建好一个长度等于原数组长度的临时数组，避免递归中频繁开辟空间</span><br><span class="line">        sort(arr,0,arr.length-1,temp);</span><br><span class="line">    &#125;</span><br><span class="line">    private static void sort(int[] arr,int left,int right,int []temp)&#123;</span><br><span class="line">        if(left&lt;right)&#123;</span><br><span class="line">            int mid &#x3D; (left+right)&#x2F;2;</span><br><span class="line">            sort(arr,left,mid,temp);&#x2F;&#x2F;左边归并排序，使得左子序列有序</span><br><span class="line">            sort(arr,mid+1,right,temp);&#x2F;&#x2F;右边归并排序，使得右子序列有序</span><br><span class="line">            merge(arr,left,mid,right,temp);&#x2F;&#x2F;将两个有序子数组合并操作</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    private static void merge(int[] arr,int left,int mid,int right,int[] temp)&#123;</span><br><span class="line">        int i &#x3D; left;&#x2F;&#x2F;左序列指针</span><br><span class="line">        int j &#x3D; mid+1;&#x2F;&#x2F;右序列指针</span><br><span class="line">        int t &#x3D; 0;&#x2F;&#x2F;临时数组指针</span><br><span class="line">        while (i&lt;&#x3D;mid &amp;&amp; j&lt;&#x3D;right)&#123;</span><br><span class="line">            if(arr[i]&lt;&#x3D;arr[j])&#123;</span><br><span class="line">                temp[t++] &#x3D; arr[i++];</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                temp[t++] &#x3D; arr[j++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        while(i&lt;&#x3D;mid)&#123;&#x2F;&#x2F;将左边剩余元素填充进temp中</span><br><span class="line">            temp[t++] &#x3D; arr[i++];</span><br><span class="line">        &#125;</span><br><span class="line">        while(j&lt;&#x3D;right)&#123;&#x2F;&#x2F;将右序列剩余元素填充进temp中</span><br><span class="line">            temp[t++] &#x3D; arr[j++];</span><br><span class="line">        &#125;</span><br><span class="line">        t &#x3D; 0;</span><br><span class="line">        &#x2F;&#x2F;将temp中的元素全部拷贝到原数组中</span><br><span class="line">        while(left &lt;&#x3D; right)&#123;</span><br><span class="line">            arr[left++] &#x3D; temp[t++];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>时间复杂度计算</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201634.png"
+                      alt="截屏2021-05-18 下午8.16.31"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201647.png"
+                      alt="截屏2021-05-18 下午8.16.44"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201730.png"
+                      alt="截屏2021-05-18 下午8.17.26"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201754.png"
+                      alt="截屏2021-05-18 下午8.17.51"
+                ></p>
+<h3 id="堆-1"><a href="#堆-1" class="headerlink" title="堆"></a>堆</h3><ul>
+<li><p><a class="link"   href="https://www.cnblogs.com/chengxiao/p/6129630.html" >https://www.cnblogs.com/chengxiao/p/6129630.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>Heapify()</p>
+</li>
+<li><p>BuildHeap()</p>
+</li>
+<li><p>Heapsort()</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201910.png"
+                      alt="1024555-20161217182750011-675658660"
+                ></p>
+<ul>
+<li><p><strong>堆排序的基本思想是：将待排序序列构造成一个大顶堆，此时，整个序列的最大值就是堆顶的根节点。将其与末尾元素进行交换，此时末尾就为最大值。然后将剩余n-1个元素重新构造成一个堆，这样会得到n个元素的次小值。如此反复执行，便能得到一个有序序列了</strong></p>
+</li>
+<li><p><strong>步骤一 构造初始堆。将给定无序序列构造成一个大顶堆（一般升序采用大顶堆，降序采用小顶堆)。</strong></p>
+</li>
+<li><p><strong>步骤二 将堆顶元素与末尾元素进行交换，使末尾元素最大。然后继续调整堆，再将堆顶元素与末尾元素交换，得到第二大元素。如此反复进行交换、重建、交换。</strong></p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">再简单总结下堆排序的基本思路：</span><br><span class="line"></span><br><span class="line">　　a.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;</span><br><span class="line"></span><br><span class="line">　　b.将堆顶元素与末尾元素交换，将最大元素&quot;沉&quot;到数组末端;</span><br><span class="line"></span><br><span class="line">　　c.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。</span><br><span class="line">　　</span><br><span class="line"></span><br><span class="line">package sortdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by chengxiao on 2016&#x2F;12&#x2F;17.</span><br><span class="line"> * 堆排序demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class HeapSort &#123;</span><br><span class="line">    public static void main(String []args)&#123;</span><br><span class="line">        int []arr &#x3D; &#123;9,8,7,6,5,4,3,2,1&#125;;</span><br><span class="line">        sort(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sort(int []arr)&#123;</span><br><span class="line">        &#x2F;&#x2F;1.构建大顶堆</span><br><span class="line">        for(int i&#x3D;arr.length&#x2F;2-1;i&gt;&#x3D;0;i--)&#123;</span><br><span class="line">            &#x2F;&#x2F;从第一个非叶子结点从下至上，从右至左调整结构</span><br><span class="line">            adjustHeap(arr,i,arr.length);</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;2.调整堆结构+交换堆顶元素与末尾元素</span><br><span class="line">        for(int j&#x3D;arr.length-1;j&gt;0;j--)&#123;</span><br><span class="line">            swap(arr,0,j);&#x2F;&#x2F;将堆顶元素与末尾元素进行交换</span><br><span class="line">            adjustHeap(arr,0,j);&#x2F;&#x2F;重新对堆进行调整</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 调整大顶堆（仅是调整过程，建立在大顶堆已构建的基础上）</span><br><span class="line">     * @param arr</span><br><span class="line">     * @param i</span><br><span class="line">     * @param length</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public static void adjustHeap(int []arr,int i,int length)&#123;</span><br><span class="line">        int temp &#x3D; arr[i];&#x2F;&#x2F;先取出当前元素i</span><br><span class="line">        for(int k&#x3D;i*2+1;k&lt;length;k&#x3D;k*2+1)&#123;&#x2F;&#x2F;从i结点的左子结点开始，也就是2i+1处开始</span><br><span class="line">            if(k+1&lt;length &amp;&amp; arr[k]&lt;arr[k+1])&#123;&#x2F;&#x2F;如果左子结点小于右子结点，k指向右子结点</span><br><span class="line">                k++;</span><br><span class="line">            &#125;</span><br><span class="line">            if(arr[k] &gt;temp)&#123;&#x2F;&#x2F;如果子节点大于父节点，将子节点值赋给父节点（不用进行交换）</span><br><span class="line">                arr[i] &#x3D; arr[k];</span><br><span class="line">                i &#x3D; k;</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[i] &#x3D; temp;&#x2F;&#x2F;将temp值放到最终的位置</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 交换元素</span><br><span class="line">     * @param arr</span><br><span class="line">     * @param a</span><br><span class="line">     * @param b</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public static void swap(int []arr,int a ,int b)&#123;</span><br><span class="line">        int temp&#x3D;arr[a];</span><br><span class="line">        arr[a] &#x3D; arr[b];</span><br><span class="line">        arr[b] &#x3D; temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h3><ul>
+<li><p><strong>核心思想：分治</strong></p>
+</li>
+<li><p>快速排序是一种排序执行效率很高的排序算法，它利用<strong>分治法</strong>来对待排序序列进行分治排序，它的思想主要是通过一趟排序将待排记录分隔成独立的两部分，其中的一部分比关键字小，后面一部分比关键字大，然后再对这前后的两部分分别采用这种方式进行排序，通过递归的运算最终达到整个序列有序，下面我们简单进行阐述。</p>
+</li>
+<li><p>我们从一个数组来逐步逐步说明快速排序的方法和思路。</p>
+<ol>
+<li>假设我们对数组{7, 1, 3, 5, 13, 9, 3, 6, 11}进行快速排序。</li>
+<li>首先在这个序列中找一个数作为<strong>基准数</strong>，为了方便可以取第一个数。</li>
+<li>遍历数组，<strong>将小于基准数的放置于基准数左边，大于基准数的放置于基准数右边</strong>。</li>
+<li>此时得到类似于这种排序的数组{3, 1, 3, 5, 6, 7, 9, 13, 11}。</li>
+<li>在初始状态下7是第一个位置，现在需要把7挪到中间的某个位置k，也即k位置是两边数的分界点。</li>
+<li>那如何做到把小于和大于基准数7的值分别放置于两边呢，我们采用<strong>双指针法</strong>，<strong>从数组的两端分别进行比对</strong>。</li>
+<li>先从最右位置往左开始找直到找到一个小于基准数的值，记录下该值的位置（记作 <strong>i</strong>）。</li>
+<li>再从最左位置往右找直到找到一个大于基准数的值，记录下该值的位置（记作 <strong>j</strong>）。</li>
+<li>如果位置i&lt;j，则交换i和j两个位置上的值，然后继续从**(j-1)的位置往前<strong>和</strong>(i+1)的位置往后**重复上面比对基准数然后交换的步骤。</li>
+<li>如果执行到i==j，表示本次比对已经结束，将最后i的位置的值与基准数做交换，此时基准数就找到了临界点的位置k，位置k两边的数组都比当前位置k上的基准值或都更小或都更大。</li>
+<li>上一次的基准值7已经把数组分为了两半，<strong>基准值7算是已归位（找到排序后的位置）</strong>。</li>
+<li>通过相同的排序思想，分别对7两边的数组进行快速排序，<strong>左边对[left, k-1]子数组排序，右边则是[k+1, right]子数组排序</strong>。</li>
+<li><strong>利用递归算法，对分治后的子数组进行排序。</strong></li>
+</ol>
+<p>快速排序之所以比较快，是因为相比冒泡排序，每次的交换都是跳跃式的，每次设置一个基准值，将小于基准值的都交换到左边，大于基准值的都交换到右边，这样不会像冒泡一样每次都只交换相邻的两个数，因此比较和交换的此数都变少了，速度自然更高。当然，也有可能出现最坏的情况，就是仍可能相邻的两个数进行交换。</p>
+<p>快速排序基于分治思想，它的时间平均复杂度很容易计算得到为<strong>O(*N*log*N*)。</strong></p>
+</li>
+<li><p>稳定性：不稳定</p>
+</li>
+<li><p>优点：快速排序是对冒泡排序的增强，增强得点在于：冒泡排序中，数据的比较和移动是在相邻两个位置进行的，数据每次交换只能后移一个位置，因而总的比较次数和移动次数较多，而快排数据的比较和移动是从两端向中间进行的，较大的数一次就能从前面移动到后面，较小的数一次就能从后面移动到前面，这样就减少了比较次数和移动次数</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 快速排序</span><br><span class="line"> * @param array</span><br><span class="line"> *&#x2F;</span><br><span class="line">public static void quickSort(int[] array) &#123;</span><br><span class="line">    int len;</span><br><span class="line">    if(array &#x3D;&#x3D; null</span><br><span class="line">            || (len &#x3D; array.length) &#x3D;&#x3D; 0</span><br><span class="line">            || len &#x3D;&#x3D; 1) &#123;</span><br><span class="line">        return ;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(array, 0, len - 1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 快排核心算法，递归实现</span><br><span class="line"> * @param array</span><br><span class="line"> * @param left</span><br><span class="line"> * @param right</span><br><span class="line"> *&#x2F;</span><br><span class="line">public static void sort(int[] array, int left, int right) &#123;</span><br><span class="line">    if(left &gt; right) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; base中存放基准数</span><br><span class="line">    int base &#x3D; array[left];</span><br><span class="line">    int i &#x3D; left, j &#x3D; right;</span><br><span class="line">    while(i !&#x3D; j) &#123;</span><br><span class="line">        &#x2F;&#x2F; 顺序很重要，先从右边开始往左找，直到找到比base值小的数</span><br><span class="line">        while(array[j] &gt;&#x3D; base &amp;&amp; i &lt; j) &#123;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 再从左往右边找，直到找到比base值大的数</span><br><span class="line">        while(array[i] &lt;&#x3D; base &amp;&amp; i &lt; j) &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 上面的循环结束表示找到了位置或者(i&gt;&#x3D;j)了，交换两个数在数组中的位置</span><br><span class="line">        if(i &lt; j) &#123;</span><br><span class="line">            int tmp &#x3D; array[i];</span><br><span class="line">            array[i] &#x3D; array[j];</span><br><span class="line">            array[j] &#x3D; tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 将基准数放到中间的位置（基准数归位）</span><br><span class="line">    array[left] &#x3D; array[i];</span><br><span class="line">    array[i] &#x3D; base;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 递归，继续向基准的左右两边执行和上面同样的操作</span><br><span class="line">    &#x2F;&#x2F; i的索引处为上面已确定好的基准值的位置，无需再处理</span><br><span class="line">    sort(array, left, i - 1);</span><br><span class="line">    sort(array, i + 1, right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><a class="link"   href="https://blog.csdn.net/qq_41384351/article/details/89812789" >https://blog.csdn.net/qq_41384351/article/details/89812789<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<h3 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h3><h3 id="线性时间复杂度-计数排序"><a href="#线性时间复杂度-计数排序" class="headerlink" title="线性时间复杂度-计数排序"></a>线性时间复杂度-计数排序</h3><h3 id="基数排序Radix-Sort"><a href="#基数排序Radix-Sort" class="headerlink" title="基数排序Radix Sort"></a>基数排序Radix Sort</h3><ul>
 <li>LSD（Least sgnificant digital）<ul>
 <li>从低位开始，适合位数少的</li>
 </ul>
