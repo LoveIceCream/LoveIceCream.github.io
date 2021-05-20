@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="随便记录">
+    <meta name="author" content="我喜欢吃的是冰淇淋啊">
+    
+    <title>
+        
+            排序算法 |
+        
+        冰淇淋Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/icecream.jpeg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/icecream.jpeg","favicon":"/images/icecream.jpeg","article_img_align":"center","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.2"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                冰淇淋Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/gallery"
+                            >
+                                图册
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/gallery">图册</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">排序算法</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/icecream.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">我喜欢吃的是冰淇淋啊</span>
+                        
+                            <span class="author-label">Lv3</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-05-20 19:17:55
+    </span>
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.6k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>11 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <ul>
+<li>文章列表摘要</li>
+</ul>
+<a id="more"></a>
+
+
+
+
+
+<h2 id="常用算法复杂度分析"><a href="#常用算法复杂度分析" class="headerlink" title="常用算法复杂度分析"></a>常用算法复杂度分析</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><ul>
+<li>插入排序，逐项加入到排序的部分中，从小到大排序</li>
+<li>时间复杂度 <ul>
+<li>最好 $O(n)$</li>
+<li>最差$O(n^2)$</li>
+<li>平均$O(n^2)$</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">for (int i &#x3D; 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">    int j &#x3D; i;</span><br><span class="line">    while (j &gt; 0)&#123;</span><br><span class="line">        if (arr[j] &lt; arr[j-1])&#123;</span><br><span class="line">            int temp ;</span><br><span class="line">            temp &#x3D; arr[j];</span><br><span class="line">            arr[j] &#x3D; arr[j-1];</span><br><span class="line">            arr[j-1] &#x3D; temp;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><ul>
+<li>归并排序（MERGE-SORT）是利用<strong>归并</strong>的思想实现的排序方法，该算法采用经典的<strong>分治</strong>（divide-and-conquer）策略（分治法将问题<strong>分</strong>(divide)成一些小的问题然后递归求解，而**治(conquer)**的阶段则将分的阶段得到的各答案”修补”在一起，即分而治之)。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201430.png"
+                      alt="1024555-20161218163120151-452283750"
+                ></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">package sortdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by chengxiao on 2016&#x2F;12&#x2F;8.</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class MergeSort &#123;</span><br><span class="line">    public static void main(String []args)&#123;</span><br><span class="line">        int []arr &#x3D; &#123;9,8,7,6,5,4,3,2,1&#125;;</span><br><span class="line">        sort(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sort(int []arr)&#123;</span><br><span class="line">        int []temp &#x3D; new int[arr.length];&#x2F;&#x2F;在排序前，先建好一个长度等于原数组长度的临时数组，避免递归中频繁开辟空间</span><br><span class="line">        sort(arr,0,arr.length-1,temp);</span><br><span class="line">    &#125;</span><br><span class="line">    private static void sort(int[] arr,int left,int right,int []temp)&#123;</span><br><span class="line">        if(left&lt;right)&#123;</span><br><span class="line">            int mid &#x3D; (left+right)&#x2F;2;</span><br><span class="line">            sort(arr,left,mid,temp);&#x2F;&#x2F;左边归并排序，使得左子序列有序</span><br><span class="line">            sort(arr,mid+1,right,temp);&#x2F;&#x2F;右边归并排序，使得右子序列有序</span><br><span class="line">            merge(arr,left,mid,right,temp);&#x2F;&#x2F;将两个有序子数组合并操作</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    private static void merge(int[] arr,int left,int mid,int right,int[] temp)&#123;</span><br><span class="line">        int i &#x3D; left;&#x2F;&#x2F;左序列指针</span><br><span class="line">        int j &#x3D; mid+1;&#x2F;&#x2F;右序列指针</span><br><span class="line">        int t &#x3D; 0;&#x2F;&#x2F;临时数组指针</span><br><span class="line">        while (i&lt;&#x3D;mid &amp;&amp; j&lt;&#x3D;right)&#123;</span><br><span class="line">            if(arr[i]&lt;&#x3D;arr[j])&#123;</span><br><span class="line">                temp[t++] &#x3D; arr[i++];</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                temp[t++] &#x3D; arr[j++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        while(i&lt;&#x3D;mid)&#123;&#x2F;&#x2F;将左边剩余元素填充进temp中</span><br><span class="line">            temp[t++] &#x3D; arr[i++];</span><br><span class="line">        &#125;</span><br><span class="line">        while(j&lt;&#x3D;right)&#123;&#x2F;&#x2F;将右序列剩余元素填充进temp中</span><br><span class="line">            temp[t++] &#x3D; arr[j++];</span><br><span class="line">        &#125;</span><br><span class="line">        t &#x3D; 0;</span><br><span class="line">        &#x2F;&#x2F;将temp中的元素全部拷贝到原数组中</span><br><span class="line">        while(left &lt;&#x3D; right)&#123;</span><br><span class="line">            arr[left++] &#x3D; temp[t++];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>时间复杂度计算</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201634.png"
+                      alt="截屏2021-05-18 下午8.16.31"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201647.png"
+                      alt="截屏2021-05-18 下午8.16.44"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201730.png"
+                      alt="截屏2021-05-18 下午8.17.26"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201754.png"
+                      alt="截屏2021-05-18 下午8.17.51"
+                ></p>
+<h3 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h3><ul>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/chengxiao/p/6129630.html" >https://www.cnblogs.com/chengxiao/p/6129630.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>Heapify()</p>
+</li>
+<li><p>BuildHeap()</p>
+</li>
+<li><p>Heapsort()</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210520192454.png"
+                      alt="1024555-20161217182750011-675658660"
+                ></p>
+<ul>
+<li><p><strong>堆排序的基本思想是：将待排序序列构造成一个大顶堆，此时，整个序列的最大值就是堆顶的根节点。将其与末尾元素进行交换，此时末尾就为最大值。然后将剩余n-1个元素重新构造成一个堆，这样会得到n个元素的次小值。如此反复执行，便能得到一个有序序列了</strong></p>
+</li>
+<li><p><strong>步骤一 构造初始堆。将给定无序序列构造成一个大顶堆（一般升序采用大顶堆，降序采用小顶堆)。</strong></p>
+</li>
+<li><p><strong>步骤二 将堆顶元素与末尾元素进行交换，使末尾元素最大。然后继续调整堆，再将堆顶元素与末尾元素交换，得到第二大元素。如此反复进行交换、重建、交换。</strong></p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">再简单总结下堆排序的基本思路：</span><br><span class="line"></span><br><span class="line">　　a.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;</span><br><span class="line"></span><br><span class="line">　　b.将堆顶元素与末尾元素交换，将最大元素&quot;沉&quot;到数组末端;</span><br><span class="line"></span><br><span class="line">　　c.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。</span><br><span class="line">　　</span><br><span class="line"></span><br><span class="line">package sortdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by chengxiao on 2016&#x2F;12&#x2F;17.</span><br><span class="line"> * 堆排序demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class HeapSort &#123;</span><br><span class="line">    public static void main(String []args)&#123;</span><br><span class="line">        int []arr &#x3D; &#123;9,8,7,6,5,4,3,2,1&#125;;</span><br><span class="line">        sort(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sort(int []arr)&#123;</span><br><span class="line">        &#x2F;&#x2F;1.构建大顶堆</span><br><span class="line">        for(int i&#x3D;arr.length&#x2F;2-1;i&gt;&#x3D;0;i--)&#123;</span><br><span class="line">            &#x2F;&#x2F;从第一个非叶子结点从下至上，从右至左调整结构</span><br><span class="line">            adjustHeap(arr,i,arr.length);</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;2.调整堆结构+交换堆顶元素与末尾元素</span><br><span class="line">        for(int j&#x3D;arr.length-1;j&gt;0;j--)&#123;</span><br><span class="line">            swap(arr,0,j);&#x2F;&#x2F;将堆顶元素与末尾元素进行交换</span><br><span class="line">            adjustHeap(arr,0,j);&#x2F;&#x2F;重新对堆进行调整</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 调整大顶堆（仅是调整过程，建立在大顶堆已构建的基础上）</span><br><span class="line">     * @param arr</span><br><span class="line">     * @param i</span><br><span class="line">     * @param length</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public static void adjustHeap(int []arr,int i,int length)&#123;</span><br><span class="line">        int temp &#x3D; arr[i];&#x2F;&#x2F;先取出当前元素i</span><br><span class="line">        for(int k&#x3D;i*2+1;k&lt;length;k&#x3D;k*2+1)&#123;&#x2F;&#x2F;从i结点的左子结点开始，也就是2i+1处开始</span><br><span class="line">            if(k+1&lt;length &amp;&amp; arr[k]&lt;arr[k+1])&#123;&#x2F;&#x2F;如果左子结点小于右子结点，k指向右子结点</span><br><span class="line">                k++;</span><br><span class="line">            &#125;</span><br><span class="line">            if(arr[k] &gt;temp)&#123;&#x2F;&#x2F;如果子节点大于父节点，将子节点值赋给父节点（不用进行交换）</span><br><span class="line">                arr[i] &#x3D; arr[k];</span><br><span class="line">                i &#x3D; k;</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[i] &#x3D; temp;&#x2F;&#x2F;将temp值放到最终的位置</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 交换元素</span><br><span class="line">     * @param arr</span><br><span class="line">     * @param a</span><br><span class="line">     * @param b</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public static void swap(int []arr,int a ,int b)&#123;</span><br><span class="line">        int temp&#x3D;arr[a];</span><br><span class="line">        arr[a] &#x3D; arr[b];</span><br><span class="line">        arr[b] &#x3D; temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h3><ul>
+<li><p><strong>核心思想：分治</strong></p>
+</li>
+<li><p>快速排序是一种排序执行效率很高的排序算法，它利用<strong>分治法</strong>来对待排序序列进行分治排序，它的思想主要是通过一趟排序将待排记录分隔成独立的两部分，其中的一部分比关键字小，后面一部分比关键字大，然后再对这前后的两部分分别采用这种方式进行排序，通过递归的运算最终达到整个序列有序，下面我们简单进行阐述。</p>
+</li>
+<li><p>我们从一个数组来逐步逐步说明快速排序的方法和思路。</p>
+<ol>
+<li>假设我们对数组{7, 1, 3, 5, 13, 9, 3, 6, 11}进行快速排序。</li>
+<li>首先在这个序列中找一个数作为<strong>基准数</strong>，为了方便可以取第一个数。</li>
+<li>遍历数组，<strong>将小于基准数的放置于基准数左边，大于基准数的放置于基准数右边</strong>。</li>
+<li>此时得到类似于这种排序的数组{3, 1, 3, 5, 6, 7, 9, 13, 11}。</li>
+<li>在初始状态下7是第一个位置，现在需要把7挪到中间的某个位置k，也即k位置是两边数的分界点。</li>
+<li>那如何做到把小于和大于基准数7的值分别放置于两边呢，我们采用<strong>双指针法</strong>，<strong>从数组的两端分别进行比对</strong>。</li>
+<li>先从最右位置往左开始找直到找到一个小于基准数的值，记录下该值的位置（记作 <strong>i</strong>）。</li>
+<li>再从最左位置往右找直到找到一个大于基准数的值，记录下该值的位置（记作 <strong>j</strong>）。</li>
+<li>如果位置i&lt;j，则交换i和j两个位置上的值，然后继续从**(j-1)的位置往前<strong>和</strong>(i+1)的位置往后**重复上面比对基准数然后交换的步骤。</li>
+<li>如果执行到i==j，表示本次比对已经结束，将最后i的位置的值与基准数做交换，此时基准数就找到了临界点的位置k，位置k两边的数组都比当前位置k上的基准值或都更小或都更大。</li>
+<li>上一次的基准值7已经把数组分为了两半，<strong>基准值7算是已归位（找到排序后的位置）</strong>。</li>
+<li>通过相同的排序思想，分别对7两边的数组进行快速排序，<strong>左边对[left, k-1]子数组排序，右边则是[k+1, right]子数组排序</strong>。</li>
+<li><strong>利用递归算法，对分治后的子数组进行排序。</strong></li>
+</ol>
+<p>快速排序之所以比较快，是因为相比冒泡排序，每次的交换都是跳跃式的，每次设置一个基准值，将小于基准值的都交换到左边，大于基准值的都交换到右边，这样不会像冒泡一样每次都只交换相邻的两个数，因此比较和交换的此数都变少了，速度自然更高。当然，也有可能出现最坏的情况，就是仍可能相邻的两个数进行交换。</p>
+<p>快速排序基于分治思想，它的时间平均复杂度很容易计算得到为<strong>O(*N*log*N*)。</strong></p>
+</li>
+<li><p>稳定性：不稳定</p>
+</li>
+<li><p>优点：快速排序是对冒泡排序的增强，增强得点在于：冒泡排序中，数据的比较和移动是在相邻两个位置进行的，数据每次交换只能后移一个位置，因而总的比较次数和移动次数较多，而快排数据的比较和移动是从两端向中间进行的，较大的数一次就能从前面移动到后面，较小的数一次就能从后面移动到前面，这样就减少了比较次数和移动次数</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 快速排序</span><br><span class="line"> * @param array</span><br><span class="line"> *&#x2F;</span><br><span class="line">public static void quickSort(int[] array) &#123;</span><br><span class="line">    int len;</span><br><span class="line">    if(array &#x3D;&#x3D; null</span><br><span class="line">            || (len &#x3D; array.length) &#x3D;&#x3D; 0</span><br><span class="line">            || len &#x3D;&#x3D; 1) &#123;</span><br><span class="line">        return ;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(array, 0, len - 1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 快排核心算法，递归实现</span><br><span class="line"> * @param array</span><br><span class="line"> * @param left</span><br><span class="line"> * @param right</span><br><span class="line"> *&#x2F;</span><br><span class="line">public static void sort(int[] array, int left, int right) &#123;</span><br><span class="line">    if(left &gt; right) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; base中存放基准数</span><br><span class="line">    int base &#x3D; array[left];</span><br><span class="line">    int i &#x3D; left, j &#x3D; right;</span><br><span class="line">    while(i !&#x3D; j) &#123;</span><br><span class="line">        &#x2F;&#x2F; 顺序很重要，先从右边开始往左找，直到找到比base值小的数</span><br><span class="line">        while(array[j] &gt;&#x3D; base &amp;&amp; i &lt; j) &#123;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 再从左往右边找，直到找到比base值大的数</span><br><span class="line">        while(array[i] &lt;&#x3D; base &amp;&amp; i &lt; j) &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 上面的循环结束表示找到了位置或者(i&gt;&#x3D;j)了，交换两个数在数组中的位置</span><br><span class="line">        if(i &lt; j) &#123;</span><br><span class="line">            int tmp &#x3D; array[i];</span><br><span class="line">            array[i] &#x3D; array[j];</span><br><span class="line">            array[j] &#x3D; tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 将基准数放到中间的位置（基准数归位）</span><br><span class="line">    array[left] &#x3D; array[i];</span><br><span class="line">    array[i] &#x3D; base;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 递归，继续向基准的左右两边执行和上面同样的操作</span><br><span class="line">    &#x2F;&#x2F; i的索引处为上面已确定好的基准值的位置，无需再处理</span><br><span class="line">    sort(array, left, i - 1);</span><br><span class="line">    sort(array, i + 1, right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41384351/article/details/89812789" >https://blog.csdn.net/qq_41384351/article/details/89812789<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：排序算法</li>
+        <li>本文作者：我喜欢吃的是冰淇淋啊</li>
+        <li>创建时间：2021-05-20 19:17:55</li>
+        <li>
+            本文链接：https://loveicecream.github.io/2021/05/20/排序算法/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/05/20/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">动态规划</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/05/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">数据结构</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">我喜欢吃的是冰淇淋啊</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.2</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">常用算法复杂度分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="nav-number">1.1.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">1.2.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A0%86"><span class="nav-number">1.3.</span> <span class="nav-text">堆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E6%8E%92"><span class="nav-number">1.4.</span> <span class="nav-text">快排</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>

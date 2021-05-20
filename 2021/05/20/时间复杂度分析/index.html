@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="随便记录">
+    <meta name="author" content="我喜欢吃的是冰淇淋啊">
+    
+    <title>
+        
+            时间复杂度分析 |
+        
+        冰淇淋Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/icecream.jpeg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/icecream.jpeg","favicon":"/images/icecream.jpeg","article_img_align":"center","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.2"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                冰淇淋Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/gallery"
+                            >
+                                图册
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/gallery">图册</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">时间复杂度分析</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/icecream.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">我喜欢吃的是冰淇淋啊</span>
+                        
+                            <span class="author-label">Lv3</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-05-20 19:14:30
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/">课程记录</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">时间复杂度</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.2k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>6 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <ul>
+<li>算法之时间复杂度分析</li>
+</ul>
+<a id="more"></a>
+
+
+
+
+
+<h1 id="Induction"><a href="#Induction" class="headerlink" title="Induction"></a>Induction</h1><ul>
+<li>归纳法</li>
+</ul>
+<h1 id="Asymptotic-Performance"><a href="#Asymptotic-Performance" class="headerlink" title="Asymptotic Performance"></a>Asymptotic Performance</h1><ul>
+<li>渐进性能</li>
+<li>How does the algorithm behave as the problem size gets very large?<ul>
+<li>Running time</li>
+<li>Memory/storage requirements</li>
+<li>Bandwidth/power requirements/logic gates/etc</li>
+</ul>
+</li>
+</ul>
+<h2 id="Asymptotic-Notation"><a href="#Asymptotic-Notation" class="headerlink" title="Asymptotic Notation"></a>Asymptotic Notation</h2><ul>
+<li><p>渐进表示法</p>
+</li>
+<li><p>算法分析</p>
+<ul>
+<li> 时间复杂度：O(n)，O($n^2$)，O($nlgn$)</li>
+<li>空间复杂度<ul>
+<li>输入规模</li>
+<li>运行时间</li>
+<li>最好情况、最坏情况、平均情况</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>大O表示法：</p>
+<ul>
+<li><p>算法的时间复杂度通常用大O符号表述，定义为T[n] = O(f(n))。称函数T(n)以f(n)为界或者称T(n)受限于f(n)。</p>
+</li>
+<li><p>如果一个问题的规模是n，解这一问题的某一算法所需要的时间为T(n)。T(n)称为这一算法的“时间复杂度”。当输入量n逐渐加大时，时间复杂度的极限情形称为算法的“渐近时间复杂度”。</p>
+</li>
+<li><p>举个例子，令$f(n)=2n^2+3n+5$ ,$O(f(n))=O(2n^2+3n+5)=O(n^2)$</p>
+</li>
+<li><p>$O(1)$</p>
+</li>
+<li><p>$O(n)$</p>
+</li>
+<li><p>$O(n^2)$</p>
+</li>
+<li><p>Master Theorem解决递归复杂度求解</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518163811.png"
+                      alt="截屏2021-05-18 下午4.37.55"
+                ></p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="../../../../Library/Application%20Support/typora-user-images/%E6%88%AA%E5%B1%8F2021-05-18%20%E4%B8%8B%E5%8D%884.38.54.png"
+                      alt="截屏2021-05-18 下午4.38.54"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518163921.png"
+                      alt="截屏2021-05-18 下午4.39.18"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518163940.png"
+                      alt="截屏2021-05-18 下午4.39.34"
+                ></p>
+<h3 id="时间复杂度分析例题"><a href="#时间复杂度分析例题" class="headerlink" title="时间复杂度分析例题"></a>时间复杂度分析例题</h3><ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void fun(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int i&#x3D;0,s&#x3D;0;</span><br><span class="line">    while(s&lt;n)</span><br><span class="line">    &#123;</span><br><span class="line">        ++i;</span><br><span class="line">        s&#x3D;s+i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518174731.png"
+                      alt="截屏2021-05-18 下午5.47.27"
+                ></p>
+</li>
+<li></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for(i&#x3D;1;i&lt;n;i&#x3D;2*i)</span><br><span class="line">    std::cout&lt;&lt;&quot;i&#x3D;&quot;&lt;&lt;i&lt;&lt;std::endl;</span><br></pre></td></tr></table></figure>
+
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518175709.png"
+                      alt="截屏2021-05-18 下午5.57.06"
+                ></p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int func(int n)</span><br><span class="line">&#123;</span><br><span class="line">    if(n&lt;&#x3D;1)</span><br><span class="line">        return 1;   &#x2F;&#x2F;①</span><br><span class="line">    else</span><br><span class="line">        return n*func(n-1);   &#x2F;&#x2F;②</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210520191902.png"
+                      alt="截屏2021-05-18 下午5.57.35"
+                ></p>
+</li>
+</ul>
+<ul>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518175800.png"
+                      alt="截屏2021-05-18 下午5.57.56"
+                ></p>
+</li>
+</ul>
+<ul>
+<li><strong>设计一个算法，用不多于3n/2的平均比较次数，在数组A[0,…,n-1]中找出最大值和最小值的元素</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;如果找最大值时遍历一次，最小值时遍历一次，则需要比较2n，所以尽量就遍历一次</span><br><span class="line">void MaxandMin(int A[],int n,int &amp;max,int &amp;min)</span><br><span class="line">&#123;</span><br><span class="line">    max&#x3D;min&#x3D;A[0];</span><br><span class="line">    for(int i&#x3D;0;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(A[i]&gt;max) max&#x3D;A[i];</span><br><span class="line">        if(A[i]&lt;min) min&#x3D;A[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518175843.png"
+                      alt="截屏2021-05-18 下午5.58.40"
+                ></p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void fun()</span><br><span class="line">&#123;</span><br><span class="line">   int i&#x3D;1,k&#x3D;0,n&#x3D;10;</span><br><span class="line">   while(i&lt;&#x3D;n-1)</span><br><span class="line">   &#123;</span><br><span class="line">       k+&#x3D;10*i;</span><br><span class="line">       ++i;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">显然看出可以改写为for(i&#x3D;1;i&lt;&#x3D;n-1;++i) ，故时间复杂度为O(n)</span><br></pre></td></tr></table></figure></li>
+<li></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void fun(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int i&#x3D;1,k&#x3D;0;</span><br><span class="line">    do</span><br><span class="line">    &#123;</span><br><span class="line">    	k+&#x3D;10*i;</span><br><span class="line">        ++i;</span><br><span class="line">    &#125;while(i&#x3D;&#x3D;n)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">显然i!&#x3D;n时跳出循环，如：n&#x3D;100，i&#x3D;1，仅循环一次，故时间复杂度O(1)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void fun(n)</span><br><span class="line">&#123;</span><br><span class="line">    int i&#x3D;1,j&#x3D;0;</span><br><span class="line">    while(i+j&lt;&#x3D;n)</span><br><span class="line">        if(i&gt;j)</span><br><span class="line">            ++j;</span><br><span class="line">    	else</span><br><span class="line">            ++i;</span><br><span class="line">&#125;</span><br><span class="line">可以写几个例子，1&lt;&#x3D;n i&#x3D;1,j&#x3D;1; 2&lt;&#x3D;n i&#x3D;2,j&#x3D;1 ;3&lt;&#x3D;n i&#x3D;2,j&#x3D;2 ... 显然时间复杂度O(n)</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void fun(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int x&#x3D;n,y&#x3D;0;</span><br><span class="line">    while(x&gt;&#x3D;(y+1)*(y+1))</span><br><span class="line">        ++y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">同样写几个例子，x&gt;&#x3D;1×1 y&#x3D;1 ; x&gt;&#x3D;2×2 y&#x3D;2 ... 显然时间复杂度O( 𝑛√</span><br><span class="line">n</span><br><span class="line"> )</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void fun(n)</span><br><span class="line">&#123;</span><br><span class="line">    i&#x3D;1;</span><br><span class="line">    while(i&lt;&#x3D;n)</span><br><span class="line">        i&#x3D;i*2</span><br><span class="line">&#125;</span><br><span class="line">同样可以写例子，显然时间复杂度为O( 𝑙𝑜𝑔2𝑛 )</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void fun(n)</span><br><span class="line">&#123;</span><br><span class="line">    i&#x3D;1;</span><br><span class="line">    while(i&lt;&#x3D;n)</span><br><span class="line">        i&#x3D;i*3</span><br><span class="line">&#125;</span><br><span class="line">显然时间复杂度为O( 𝑙𝑜𝑔3𝑛 )</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li><strong>假设n为2的乘幂，求以下时间复杂度</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void counter()</span><br><span class="line">&#123;</span><br><span class="line">    int n,x,count;</span><br><span class="line">    std::cout&lt;&lt;&quot;n:&quot;;</span><br><span class="line">    std::cin&gt;&gt;n;</span><br><span class="line">    count&#x3D;0;</span><br><span class="line">    x&#x3D;2;</span><br><span class="line">    while(x&lt;n&#x2F;2)</span><br><span class="line">    &#123;</span><br><span class="line">        x&#x3D;2*x;</span><br><span class="line">        ++count;</span><br><span class="line">    &#125;</span><br><span class="line">    std::cout&lt;&lt;count&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518180222.png"
+                      alt="截屏2021-05-18 下午6.02.18"
+                ></p>
+<ul>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210520191919.png"
+                      alt="截屏2021-05-18 下午6.02.34"
+                ></p>
+</li>
+</ul>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">void sort(int j,int n)</span><br><span class="line">&#123;</span><br><span class="line">    int i,temp;</span><br><span class="line">    if(j&lt;n)</span><br><span class="line">    &#123;</span><br><span class="line">        for(i&#x3D;j;i&lt;&#x3D;n;++i)</span><br><span class="line">            if(a[i]&lt;a[j])</span><br><span class="line">                swap(a[i],a[j]);   &#x2F;&#x2F;本函数时间复杂度O(1)</span><br><span class="line">        ++j;</span><br><span class="line">        sort(j,n)   &#x2F;&#x2F;递归调用</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518180303.png"
+                      alt="截屏2021-05-18 下午6.03.01"
+                ></p>
+<ul>
+<li><strong>设计下列问题算法，分析其最坏情况的时间复杂度</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">(1)在数组A[0,...,n-1]中查找值为k的元素，若找到，则输出其位置i(i为数组下标)；否则输出-1为坐标</span><br><span class="line"></span><br><span class="line">int findK(int A[],int k)   &#x2F;&#x2F;这里假设A中元素都是int型</span><br><span class="line">&#123;</span><br><span class="line">    int i &#x3D;0;</span><br><span class="line">    while(i&lt;n&amp;&amp;A[i]!&#x3D;k)</span><br><span class="line">        i++;</span><br><span class="line">    return i;  &#x2F;&#x2F;找到了</span><br><span class="line">    else</span><br><span class="line">        return -1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">最坏情况：就是遍历一遍后查不到k，比较了n+1次，故时间复杂度O(n)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(2)在数组A[0,...,n-1]中找出元素的最大值和次最大值</span><br><span class="line"></span><br><span class="line">void mxa(int A[],int M, int m)    &#x2F;&#x2F;M为最大值，m为次大值</span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    M&#x3D;m&#x3D;MIN;   &#x2F;&#x2F;设MIN为已定义常量，比A[]中所有元素都小</span><br><span class="line">    for(i&#x3D;0;i&lt;n;i++)</span><br><span class="line">    &#123;	&#x2F;&#x2F;find M</span><br><span class="line">    	if(A[i]&gt;M) M&#x3D;A[i];</span><br><span class="line">    &#125;</span><br><span class="line">    for(i&#x3D;0;i&lt;n;i++)</span><br><span class="line">    &#123;	&#x2F;&#x2F;find m</span><br><span class="line">        if(A[i]!&#x3D;M&amp;&amp;A[i]&gt;m) m&#x3D;A[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">最坏情况：各来一次遍历，并都是最后找到，一共比较了2n-2次，故时间复杂度O(n)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h1 id="常见数据结构与算法的时间、空间复杂度总结"><a href="#常见数据结构与算法的时间、空间复杂度总结" class="headerlink" title="常见数据结构与算法的时间、空间复杂度总结"></a>常见数据结构与算法的时间、空间复杂度总结</h1><h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><ul>
+<li>知乎上搜到的比较全的图</li>
+<li>图片转自：<a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143358017" >https://zhuanlan.zhihu.com/p/143358017<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<h4 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic1.zhimg.com/80/v2-adb1873fd4b67f7e539a5e272e177360_1440w.jpg"
+                     
+                ></p>
+<h4 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic2.zhimg.com/80/v2-975678b7af42d4c482b4a7c94bb36bb5_1440w.jpg"
+                     
+                ></p>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a>图</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic4.zhimg.com/80/v2-032e0d38f3f6114114248e79e07fc5d7_1440w.jpg"
+                     
+                ></p>
+<h4 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic2.zhimg.com/80/v2-ae19249c2f3624cc6869430f0221b831_1440w.jpg"
+                     
+                ></p>
+<h4 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic2.zhimg.com/80/v2-c9cd63215e0c2bf8a833e26c946d0745_1440w.jpg"
+                     
+                ></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：时间复杂度分析</li>
+        <li>本文作者：我喜欢吃的是冰淇淋啊</li>
+        <li>创建时间：2021-05-20 19:14:30</li>
+        <li>
+            本文链接：https://loveicecream.github.io/2021/05/20/时间复杂度分析/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/05/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">数据结构</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/04/19/IDEA/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">IDEA</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">我喜欢吃的是冰淇淋啊</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.2</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Induction"><span class="nav-number">1.</span> <span class="nav-text">Induction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Asymptotic-Performance"><span class="nav-number">2.</span> <span class="nav-text">Asymptotic Performance</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Asymptotic-Notation"><span class="nav-number">2.1.</span> <span class="nav-text">Asymptotic Notation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%E4%BE%8B%E9%A2%98"><span class="nav-number">2.1.1.</span> <span class="nav-text">时间复杂度分析例题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">常见数据结构与算法的时间、空间复杂度总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%A7%88"><span class="nav-number">3.1.</span> <span class="nav-text">概览</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">3.1.0.1.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A0%86"><span class="nav-number">3.1.0.2.</span> <span class="nav-text">堆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE"><span class="nav-number">3.1.0.3.</span> <span class="nav-text">图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"><span class="nav-number">3.1.0.4.</span> <span class="nav-text">排序算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95"><span class="nav-number">3.1.0.5.</span> <span class="nav-text">搜索算法</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>
