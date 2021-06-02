@@ -9,7 +9,7 @@
     
     <title>
         
-            LinuxCMD |
+            mysql必知必会 |
         
         冰淇淋Blog
     </title>
@@ -173,7 +173,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">LinuxCMD</span>
+            <span class="title-hover-animation">mysql必知必会</span>
         </div>
 
         
@@ -191,19 +191,8 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-04-18 08:44:31
+        <i class="fas fa-edit"></i>&nbsp;2021-05-07 12:02:40
     </span>
-    
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/CMD/">CMD</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
     
     
         <span class="article-tags article-meta-item">
@@ -211,11 +200,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/CMD/">CMD</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/Linux/">Linux</a>&nbsp;
+                        <a href="/tags/mysql/">mysql</a>&nbsp;
                     </li>
                 
             </ul>
@@ -225,12 +210,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>170 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>1k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>3 分钟</span>
         </span>
     
     
@@ -247,33 +232,117 @@
 
         <div class="article-content markdown-body">
             <ul>
-<li>记录常用的Linux命令</li>
+<li>mysql必知必会读书笔记</li>
 </ul>
 <a id="more"></a>
 
+<h3 id="order-by-默认不区分大小写，但是是可以通过设置更改的"><a href="#order-by-默认不区分大小写，但是是可以通过设置更改的" class="headerlink" title="order by 默认不区分大小写，但是是可以通过设置更改的"></a>order by 默认不区分大小写，但是是可以通过设置更改的</h3><ul>
+<li><p>永久</p>
+<p>将 表的collate改成case sensitive的</p>
+</li>
+<li><p>临时</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> test_collate <span class="keyword">order</span> <span class="keyword">by</span> text <span class="keyword">collate</span> utf8_bin;</span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r  &#x2F;Users&#x2F;wangzhen&#x2F;PycharmProjects&#x2F;microservice&#x2F;model&#x2F;autohome&#x2F;CONFIG.py wangzhen@192.168.168.116:&#x2F;home&#x2F;wangzhen&#x2F;microservice&#x2F;model&#x2F;autohome</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">put &#x2F;Users&#x2F;wangzhen&#x2F;PycharmProjects&#x2F;captcha_break&#x2F;readme  &#x2F;opt&#x2F;iims&#x2F;captchaBreak</span><br></pre></td></tr></table></figure>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r /Users/wangzhen/PycharmProjects/home/wangzhen/microservice.zip  wangzhen<span class="variable">@192</span>.<span class="number">168.168</span>.<span class="number">116</span><span class="symbol">:/home/wangzhen</span></span><br></pre></td></tr></table></figure>
+<h3 id="Limit"><a href="#Limit" class="headerlink" title="Limit"></a>Limit</h3><ul>
+<li>取前5行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from table limit 5</span><br></pre></td></tr></table></figure>
+<ul>
+<li>从第10行开始取前5行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from table limit 10，5</span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r    &#x2F;Users&#x2F;wangzhen&#x2F;Downloads&#x2F;iimspythonenv.yaml wangzhen@192.168.168.116:&#x2F;home&#x2F;wangzhen</span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r    wangzhen@192.168.168.113:&#x2F;opt&#x2F;iims&#x2F;tomcat_dfyc&#x2F;logs&#x2F;catalina.out  &#x2F;Users&#x2F;wangzhen&#x2F;Downloads</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n </span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp -r &#x2F;home&#x2F;wangzhen&#x2F;Python-3.6.0.tgz  &#x2F;usr&#x2F;local</span><br><span class="line"></span><br><span class="line">cp -r Miniconda3-latest-Linux-x86_64.sh &#x2F;home&#x2F;wangzhen</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv &#x2F;root&#x2F;miniconda3 &#x2F;home&#x2F;wangzhen</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv &#x2F;home&#x2F;wangzhen&#x2F;ML&#x2F;microservice&#x2F;microservice &#x2F;home&#x2F;wangzhen</span><br></pre></td></tr></table></figure>
+<h3 id="mysql-使用正则表达式"><a href="#mysql-使用正则表达式" class="headerlink" title="mysql 使用正则表达式"></a>mysql 使用正则表达式</h3><h3 id="全文本搜索"><a href="#全文本搜索" class="headerlink" title="全文本搜索"></a>全文本搜索</h3><ul>
+<li>MyISAM引擎支持全文本搜索</li>
+<li>InnoDB引擎不支持全文本搜索</li>
+<li>为例进行全文本搜索，必须索引被搜索的列</li>
+<li>下列create 语句演示了fulltext子句的使用，从而支持全文搜索</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210507142059.png"
+                      alt="截屏2021-05-07 下午2.20.56"
+                ></p>
+<ul>
+<li><p>定义 fulltext 之后，增加、更新、删除都会更新索引</p>
+</li>
+<li><p>导入数据到一个新表时，先不要建立索引，有利于更快的导入数据</p>
+</li>
+<li><p>使用两个函数Match()和Against()执行全文本搜索，其中Match()指定被搜索的列，Against()指定要使用的搜索表达式。</p>
+</li>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210507142610.png"
+                      alt="截屏2021-05-07 下午2.26.08"
+                ></p>
+</li>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210507143319.png"
+                     
+                ></p>
+</li>
+<li><p>Match() 中的字段需要和 fulltext中的字段相同，且顺序相同，索引嘛</p>
+</li>
+<li><p>默认不区分大小写，除非使用 binary</p>
+</li>
+<li><p>全文搜索返回结果会有一个默认的排序，比如：搜索词出现的早的排序等级高，等级由MySQL根据行中词的数目、唯一词的数目、整个索引中词的 总数以及包含该词的行的数目计算出来。正如所见，不包含词rabbit的 行等级为0(因此不被前一例子中的WHERE子句选择)。确实包含词rabbit 的两个行每行都有一个等级值，文本中词靠前的行的等级值比词靠后的行的等级值高。</p>
+</li>
+<li></li>
+</ul>
+<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><ul>
+<li>LOW_PRIORITY <ul>
+<li>降低写的优先级</li>
+<li>INSERT LOW_PRIORITY  INTO …</li>
+<li>MyISAM存储引擎的读锁和写锁是互斥的，读操作执行时产生读锁，写操作执行前产生写锁，写操作检测到存在读锁，则会等待读锁释放后执行，后继操作检测到存在写锁，则会等待写锁释放后执行。</li>
+<li>如果在SQL中指定LOW_PRIORITY，可使写操作的优先级降低，相当于原来的写锁在写操作执行前就会产生，当指定LOW_PRIORITY后，写锁在写操作执行时才会产生，因此可降低读操作的等待时间。</li>
+<li>虽然修改LOW_PRIORITY可降低读操作的等待时间，但由于降低了写操作的优先级，写操作需等待读锁都释放后才可执行，使MySQL队列中有可能堆积写操作。</li>
+</ul>
+</li>
+</ul>
+<h3 id="mysql引擎"><a href="#mysql引擎" class="headerlink" title="mysql引擎"></a>mysql引擎</h3><ul>
+<li>InnoDB<ul>
+<li>可靠的事务处理引擎</li>
+<li>不支持全文本搜索</li>
+</ul>
+</li>
+<li>MEMORY<ul>
+<li>存储在内存，适用临时表，速度快</li>
+<li>功能相当于MyISAM</li>
+</ul>
+</li>
+<li>MyISAM<ul>
+<li>性能极高的引擎</li>
+<li>支持全文本搜索</li>
+<li>不支持事务处理</li>
+</ul>
+</li>
+<li>CSV<ul>
+<li> CSV引擎有点类似Oracle的外部表。它可以将“逗号分隔值（CSV）文件”作为表进行处理，但不支持在这种文件上建立相关索引。在服务器运行中，这种引擎支持从数据库中拷入/拷出CSV文件。如果从电子表格软件输出一个CSV文件，将其存放在MySQL服务器的数据目录中，服务器就能够马上读取相关的CSV文件。同样，如果写数据库到一个CSV表，外部程序也可以立刻读取它。在实现某种类型的日志记录时，CSV表作为一种数据交换格式，特别有用。</li>
+<li>适合将excel文件或者csv文件的数据导入到数据库<ul>
+<li>没有索引，跟MySQL5的数据字典库一样。</li>
+<li>可以直接用任何文本编辑器来编辑数据文件。</li>
+<li>非英文编码问题。我的字符终端和表都是UTF-8的，所以要把上传的CSV文件保存为UTF-8的编码。</li>
+<li>编码转化工具，我这边在WINDOWS下用EDITPLUS来转化，在LINUX下可以用ICONV命令行工具来转化编码。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/axing-articles/p/11413893.html" >https://www.cnblogs.com/axing-articles/p/11413893.html<i class="fas fa-external-link-alt"></i></a></p>
+<ul>
+<li>acid</li>
+<li>隔离级别及其可以避免的问题</li>
+</ul>
 
         </div>
 
@@ -281,11 +350,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：LinuxCMD</li>
+        <li>本文标题：mysql必知必会</li>
         <li>本文作者：我喜欢吃的是冰淇淋啊</li>
-        <li>创建时间：2021-04-18 08:44:31</li>
+        <li>创建时间：2021-05-07 12:02:40</li>
         <li>
-            本文链接：https://loveicecream.github.io/2021/04/18/LinuxCMD/
+            本文链接：https://loveicecream.github.io/2021/05/07/mysql必知必会/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -302,13 +371,13 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2021/04/18/CondaCMD/"
+                           href="/2021/05/20/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">CondaCMD</span>
+                                <span class="post-nav-title-item">时间复杂度分析</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
@@ -318,10 +387,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/04/18/JavaBasic/"
+                           href="/2021/05/07/gxnmysql/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">JavaBasic</span>
+                                <span class="post-nav-title-item">gxnmysql</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -440,7 +509,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#order-by-%E9%BB%98%E8%AE%A4%E4%B8%8D%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99%EF%BC%8C%E4%BD%86%E6%98%AF%E6%98%AF%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E8%AE%BE%E7%BD%AE%E6%9B%B4%E6%94%B9%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">order by 默认不区分大小写，但是是可以通过设置更改的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Limit"><span class="nav-number">2.</span> <span class="nav-text">Limit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql-%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">mysql 使用正则表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E6%96%87%E6%9C%AC%E6%90%9C%E7%B4%A2"><span class="nav-number">4.</span> <span class="nav-text">全文本搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="nav-number">5.</span> <span class="nav-text">插入数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql%E5%BC%95%E6%93%8E"><span class="nav-number">6.</span> <span class="nav-text">mysql引擎</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E5%8A%A1"><span class="nav-number">7.</span> <span class="nav-text">事务</span></a></li></ol>
     </div>
 </div>
         </aside>

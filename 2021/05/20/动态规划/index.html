@@ -199,12 +199,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>400 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>3.2k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>13 分钟</span>
         </span>
     
     
@@ -254,7 +254,116 @@
 <li>重复子问题：子问题会被重复计算好多次的，将子问题的结果存起来，防止重复计算。</li>
 </ol>
 <h5 id="钢条切割问题"><a href="#钢条切割问题" class="headerlink" title="钢条切割问题"></a>钢条切割问题</h5><p>![截屏2021-05-02 下午11.39.23](截屏2021-05-02 下午11.39.23.png)</p>
-<p>最长公共子序列问题</p>
+<ul>
+<li><p>长度为n的钢条可以有2n-1中切割方案，所以当n很大时用暴力求解的方法是行不通的。假设将该钢条切割成k(k的取值为[1,n])段，切割顺序为从钢条的左端开始，那么最有切割方案是：</p>
+<p>n = len1+len2+len3+…+lenk</p>
+<p>将钢条切割为长度是len1，len2，…，lenk的小段，得到最大收益</p>
+<p>rn = p len1+p len2+p len3+…+p lenk</p>
+<p>根据样例给出的价格表，可以得到最大收益值ri（i=1,2,…,10）及对应的切割方案。</p>
+</li>
+<li><p>长度为n的钢条其最大收益值和长度为k和n-k的两条钢条的最大收益值相关。</p>
+<p>我们可以假设长度为n的钢条的最大收益值：</p>
+<p>rn = max(pn,r1+rn-1,r2+rn-2,…,rn-1+r1)，pn为不切割时的价格。</p>
+<p>这样可以通过组合两个相关子问题的最优解，并在所有可能的两段切割方案中选取组合收益最大者，构成原问题的最优解。</p>
+<p>另一种思路：将钢条从左边切割长度为i的一段，只对右边剩下的长度为n-i的一段继续进行切割(递归求解)，对左边的一段则不再进行分割。</p>
+<p>rn = max(pi + rn-i) (i取值范围[1,n])</p>
+<p>在这个公式中，原问题的最优解只包含一个相关子问题(右端剩余部分)的解。</p>
+</li>
+<li><p><strong>自顶向下的递归算法实现</strong></p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;自顶向下递归实现，prof[]是样例给出的价格表</span><br><span class="line">int cutRod(int prof[], int n)</span><br><span class="line">&#123;</span><br><span class="line">    if (n &#x3D;&#x3D; 0)</span><br><span class="line">        return 0;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        int profit &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 1; i &lt;&#x3D; n; i++)</span><br><span class="line">            profit &#x3D; max(profit, prof[i] + cutRod(prof, n - i));</span><br><span class="line">        return profit;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>使用动态规划方法求解钢条切割的最优化问题</p>
+<ul>
+<li>带备忘的自顶向下法</li>
+<li>备忘就是一张存储每次计算最佳收益的表，这样就可以避免“自顶向下递归算法”中出现的重复计算重叠子问题的情况。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int memoizedCutRodAux(int pro[], int r[], int n)</span><br><span class="line">&#123;</span><br><span class="line">    if (r[n] &gt; 0)</span><br><span class="line">        return r[n];</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        int profit &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 1; i &lt;&#x3D; n; i++)</span><br><span class="line">            profit &#x3D; max(profit, pro[i] + memoizedCutRodAux(pro, r, n - i));</span><br><span class="line">        r[n] &#x3D; profit;</span><br><span class="line">        return profit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>自底向上法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int bottomUpCutRod(int pro[], int r[], int n)</span><br><span class="line">&#123;</span><br><span class="line">    for (int i &#x3D; 1; i &lt;&#x3D; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        int profit &#x3D; 0;</span><br><span class="line">        for (int j &#x3D; 1; j &lt;&#x3D; i; j++)</span><br><span class="line">            profit &#x3D; max(profit, pro[j] + r[i - j]);</span><br><span class="line">        r[i] &#x3D; profit;</span><br><span class="line">    &#125;</span><br><span class="line">    return r[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>现在把思路一中rn = max(pn,r1+rn-1,r2+rn-2,…,rn-1+r1)的算法给出</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int bottomUpCutRodTwo(int pro[], int r[], int n)</span><br><span class="line">&#123;</span><br><span class="line">    for (int i &#x3D; 1; i &lt;&#x3D; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        int profit &#x3D; pro[i];</span><br><span class="line">        for (int j &#x3D; 1; j &lt;&#x3D; i &#x2F; 2; j++)</span><br><span class="line">            profit &#x3D; max(profit, r[j] + r[i - j]);</span><br><span class="line">        r[i] &#x3D; profit;</span><br><span class="line">    &#125;</span><br><span class="line">    return r[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210522130105.png"
+                      alt="702782-20151120142101671-1918163657"
+                ></p>
+<ul>
+<li><p>可以看出该图是一个有向图，每个顶点唯一地对应一个子问题，若是求子问题x的最优解时需要直接用到其子问题y的最优解，那么在子问题图中就会有一条从子问题x的顶点到子问题y的顶点的有向边。子问题G=(V,E)的规模可以确定动态规划的运行时间，由于每个子问题只求解一次，因此算法的运行时间等于每个子问题求解时间之和。通常，一个子问题的求解时间与子问题图中对应顶点的出度成正比，而子问题的数目等于子问题图中顶点数。因此，通常情况下，动态规划的运行时间与顶点和边的数量呈线性关系。</p>
+</li>
+<li><p>总结：</p>
+<ul>
+<li><p>结合动态规划的算法设计步骤来说，钢条切割问题也是遵守其标准的。</p>
+</li>
+<li><p>第一步先确定最优化解的结构特征：最优切割方案是由第一次切割后得到的两段钢条的最优切割方案组成的，或者是第一次切割后，其右端剩余部分的最优切割方案组成的。</p>
+</li>
+<li><p>第二步递归定义最优解的值，由上面的分析我们可以得到rn = max(pn,r1+rn-1,r2+rn-2,…,rn-1+r1)和rn = max(pi + rn-i) 两个最优解的公式，其满足求得原问题最优解的条件。</p>
+</li>
+<li><p>第三步根据得到的求最优解公式，计算出结果。我们用到了两种方法：带备忘的自顶向下递归法和自底向上法（非递归）。</p>
+</li>
+<li><p>第四步构造出最优解。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="最长公共子序列问题"><a href="#最长公共子序列问题" class="headerlink" title="最长公共子序列问题"></a>最长公共子序列问题</h5><ul>
+<li><strong>问题：例如：X={A,B,C,B,A,D,B}，Y={B,C,B,A,A,C}，那么，二者的最长公共子序列是{B,C,B,A}，长度为4。</strong></li>
+</ul>
+<p><strong>我们首先需要搞清楚以下两个概念：</strong></p>
+<p><strong>最长公共子序列 VS 最长公共子串：</strong></p>
+<p>找两个字符串的最长公共子串，这个子串要求在原字符串中是连续的。而最长公共子序列则并不要求连续。</p>
+<p>上述问题中的最长公共子序列与最长公共子串是一样的。</p>
+<p>但是再举例<strong>X={A,B,C,B,A,D,B}，Y={B,C,B,A,A,B}，\</strong>二者的最长公共子序列是**{B,C,B,A,B}，而二者的最长公共子串是{B,C,B,A}。** </p>
+<ul>
+<li><p><strong>求解思路：</strong></p>
+<p><strong>1.分析最优解的结构特征：</strong></p>
+<p>设Zk={z1,z2,z3,……zk}是Xm={x1,x2,x3,……xm}和Yn={y1,y2,y3,……yn}的最长公共子序列。</p>
+<p>则可以得到：</p>
+<p>若xm=yn=zk，那么Zk-1={z1,z2,z3,……zk-1}是Xm-1={x1,x2,x3,……xm-1}和Yn-1={y1,y2,y3,……yn-1}的最长公共子序列；</p>
+<p>若xm≠yn，xm≠zk，则去除xm后，Zk={z1,z2,z3,……zk}仍然是Xm-1={x1,x2,x3,……xm-1}和Yn={y1,y2,y3,……yn}的最长公共子序列；</p>
+<p>若xm≠yn，yn≠zk，则去除yn后，Zk={z1,z2,z3,……zk}仍然是Xm={x1,x2,x3,……xm}和Yn-1={y1,y2,y3,……yn-1}的最长公共子序列；</p>
+<p><strong>2.建立最优值的递归式</strong></p>
+<p>数据结构选择：</p>
+<p>用c[i][j]表示Xi和Yj的最长公共子序列长度（这一步很关键，越到右下角，值会越来越大，我们最后只需要选取右下角的值就可以确定最长公共子序列的长度）</p>
+<p>讨论：</p>
+<p>若xi=yj=zk，那么c[i][j] = c[i-1][j-1] + 1；</p>
+<p>若xi≠yj，xi≠zk，那么Xi需要进一步缩小一个长度进行匹配，即去除xi不影响整体的最长子序列变化，c[i][j] = c[i-1][j] ；</p>
+<p>若xi≠yj，yj≠zk，那么Yj需要进一步缩小一个长度进行匹配，即去除yj不影响整体的最长子序列变化，c[i][j] = c[i][j-1] ；</p>
+<p>结束条件，若i=0或者j=0，则c[i][j]=0。</p>
+<p>所以，在xi≠yj的情况下，有两种情况，c[i][j]必等于两种情况下的最大值，即c[i][j] = max(c[i-1][j], c[i][j-1])</p>
+<p><strong>3.自底向上计算最优值，并记录最优值与最优策略</strong></p>
+<p>我们由上面可以知道，c[0][j]=0或者c[i][0]=0.</p>
+<p>先使i = 1，则求x1与{y1,y2,y3,……yn}逐一比较。如图，x1≠y1，执行c[1][1] = max(c[0][1], c[1][0]) =0，接着，x1=y2，则执行，c[1][2] = c[0][1] + 1=1 ，接着，x1≠y3，则执行c[1][3] = max(c[0][3], c[1][2]) =1，……这样就求出了X1与Yn的最长公共子序列长度；</p>
+<p>然后，i = 2，则建立在x1比较的基础上就可以求出{x1,x2}与{y1,y2,y3,……yn}的最长公共子序列长度；</p>
+<p>然后，i = 3，建立在{x1,x2}的基础上，则可以求出{x1,x2,x3}与{y1,y2,y3,……yn}的最长公共子序列长度；</p>
+<p>……</p>
+<p>然后，i = m，建立在{x1,x2,……xm-1}的基础上，则可以求出{x1,x2,……xm-1}与{y1,y2,y3,……yn}的最长公共子序列长度；</p>
+<p><strong>4.构造最优解</strong></p>
+<p>在知道了最长公共子序列的长度之后，我们还需要知道最长公共子序列中都是哪些元素。我们在c[i][j]数组的右下角能够得到最长公共子序列的长度，那么，我们可以反向推出这个元素分别是什么。</p>
+<p>由上述，我们可以得到：</p>
+<p>若xi=yj=zk，c[i][j] = c[i-1][j-1] + 1；</p>
+<p>若xi≠yj，xi≠zk，c[i][j] = c[i-1][j] ；</p>
+<p>若xi≠yj，yj≠zk，c[i][j] = c[i][j-1] ；</p>
+<p>所以，c[i][j]由上述三个等式中的一个得到，那么我们只需要记录下c[i][j]是从三个等式中哪一个得到的，那么对应的元素我们就知道了。</p>
+<p>这样，我们就必须在借助一个数组就行保存了，我们建立新的数组b[i][j]来记录是从哪个等式中得到，即构造出下列结构。</p>
+<p>若xi=yj=zk，c[i][j] = c[i-1][j-1] + 1，则b[i][j] = 1，那么我们就可以取出xi或者yj作为最长公共子序列中的元素；</p>
+<p>若xi≠yj，yj≠zk，c[i][j] = c[i][j-1]，则b[i][j] = 2，那么我们就可以去追踪c[i][j-1]；</p>
+<p>若xi≠yj，xi≠zk，c[i][j] = c[i-1][j] ，则b[i][j] = 3，那么我们就可以去追踪c[i-1][j]；</p>
+<p>追踪到i=0或者j=0，停止，如下图则是根据c[i][j]取值的来源将b[i][j]数组补充完整</p>
+<p>我们由上述构造b[i][j]的方法得知，若 b[i][j]= 2，那么我们去追踪c[i][j-1]，若b[i][j]= 3，那么我们去追踪c[i-1][j]，换言之，就是b[i][j]= 2，就往左找，b[i][j]= 3，就往右找，若b[i][j]= 1，就可以输出此时的xi或者yj；</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N&#x3D;1024;</span><br><span class="line">int c[N][N],b[N][N];</span><br><span class="line">char s1[N],s2[N];</span><br><span class="line">int len1,len2;</span><br><span class="line">void LCS()</span><br><span class="line">&#123;</span><br><span class="line">    for(int i &#x3D; 1; i &lt;&#x3D; len1; i++)&#123;</span><br><span class="line">        for(int j &#x3D; 1; j &lt;&#x3D; len2; j++)&#123;</span><br><span class="line">            if(s1[i-1] &#x3D;&#x3D; s2[j-1])&#123; &#x2F;&#x2F;注：此处的s1与s2序列是从s1[0]与s2[0]开始的</span><br><span class="line">                c[i][j] &#x3D; c[i-1][j-1] + 1;</span><br><span class="line">                b[i][j] &#x3D; 1;</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                if(c[i][j-1] &gt;&#x3D; c[i-1][j])&#123;</span><br><span class="line">                    c[i][j] &#x3D; c[i][j-1];</span><br><span class="line">                    b[i][j] &#x3D; 2;</span><br><span class="line">                &#125;</span><br><span class="line">                else&#123;</span><br><span class="line">                    c[i][j] &#x3D; c[i-1][j];</span><br><span class="line">                    b[i][j] &#x3D;3;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LCS_PRINT(int i, int j)</span><br><span class="line">&#123;</span><br><span class="line">    if(i&#x3D;&#x3D;0 || j&#x3D;&#x3D;0)&#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    if(b[i][j] &#x3D;&#x3D; 1)&#123;</span><br><span class="line">        LCS_PRINT(i-1,j-1);</span><br><span class="line">        cout &lt;&lt; s1[i-1];</span><br><span class="line">    &#125;</span><br><span class="line">    else if(b[i][j] &#x3D;&#x3D; 2)&#123;</span><br><span class="line">        LCS_PRINT(i,j-1);</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        LCS_PRINT(i-1,j);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;请输入X字符串&quot; &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; s1;</span><br><span class="line">    cout &lt;&lt; &quot;请输入Y字符串&quot; &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; s2;</span><br><span class="line">    len1 &#x3D; strlen(s1);</span><br><span class="line">    len2 &#x3D; strlen(s2);</span><br><span class="line">    for(int i &#x3D; 0; i &lt;&#x3D; len1; i++)&#123;</span><br><span class="line">        c[i][0] &#x3D; 0;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int j &#x3D; 0; j &lt;&#x3D; len2; j++)&#123;</span><br><span class="line">        c[0][j] &#x3D; 0;</span><br><span class="line">    &#125;</span><br><span class="line">    LCS();</span><br><span class="line">    cout &lt;&lt; &quot;s1与s2的最长公共子序列的长度是：&quot; &lt;&lt; c[len1][len2] &lt;&lt;endl;</span><br><span class="line">    cout &lt;&lt; &quot;s1与s2的最长公共子序列是：&quot;;</span><br><span class="line">    LCS_PRINT(len1,len2);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -421,7 +530,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dynamic-Programming"><span class="nav-number">1.</span> <span class="nav-text">Dynamic Programming</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="nav-number">1.1.</span> <span class="nav-text">动态规划的核心思想</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%92%A2%E6%9D%A1%E5%88%87%E5%89%B2%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">钢条切割问题</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dynamic-Programming"><span class="nav-number">1.</span> <span class="nav-text">Dynamic Programming</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="nav-number">1.1.</span> <span class="nav-text">动态规划的核心思想</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%92%A2%E6%9D%A1%E5%88%87%E5%89%B2%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">钢条切割问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.2.</span> <span class="nav-text">最长公共子序列问题</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
         </aside>

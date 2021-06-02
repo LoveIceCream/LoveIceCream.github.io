@@ -98,6 +98,8 @@
 
 
 <ul>
+<li><p>安装流程</p>
+</li>
 <li></li>
 </ul>
 ]]></content>
@@ -227,6 +229,30 @@
 <li>记录常用的Linux命令</li>
 </ul>
 <a id="more"></a>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -r  &#x2F;Users&#x2F;wangzhen&#x2F;PycharmProjects&#x2F;microservice&#x2F;model&#x2F;autohome&#x2F;CONFIG.py wangzhen@192.168.168.116:&#x2F;home&#x2F;wangzhen&#x2F;microservice&#x2F;model&#x2F;autohome</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">put &#x2F;Users&#x2F;wangzhen&#x2F;PycharmProjects&#x2F;captcha_break&#x2F;readme  &#x2F;opt&#x2F;iims&#x2F;captchaBreak</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">scp -r /Users/wangzhen/PycharmProjects/home/wangzhen/microservice.zip  wangzhen<span class="variable">@192</span>.<span class="number">168.168</span>.<span class="number">116</span><span class="symbol">:/home/wangzhen</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -r    &#x2F;Users&#x2F;wangzhen&#x2F;Downloads&#x2F;iimspythonenv.yaml wangzhen@192.168.168.116:&#x2F;home&#x2F;wangzhen</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -r    wangzhen@192.168.168.113:&#x2F;opt&#x2F;iims&#x2F;tomcat_dfyc&#x2F;logs&#x2F;catalina.out  &#x2F;Users&#x2F;wangzhen&#x2F;Downloads</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">conda create -n </span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cp -r &#x2F;home&#x2F;wangzhen&#x2F;Python-3.6.0.tgz  &#x2F;usr&#x2F;local</span><br><span class="line"></span><br><span class="line">cp -r Miniconda3-latest-Linux-x86_64.sh &#x2F;home&#x2F;wangzhen</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mv &#x2F;root&#x2F;miniconda3 &#x2F;home&#x2F;wangzhen</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mv &#x2F;home&#x2F;wangzhen&#x2F;ML&#x2F;microservice&#x2F;microservice &#x2F;home&#x2F;wangzhen</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>CMD</category>
@@ -309,6 +335,29 @@
       </tags>
   </entry>
   <entry>
+    <title>gxnmysql</title>
+    <url>/2021/05/07/gxnmysql/</url>
+    <content><![CDATA[<ul>
+<li>高性能mysql笔记</li>
+</ul>
+<a id="more"></a>
+
+
+
+<ul>
+<li><p>InnoDB默认事务隔离级别为可重复读，并通过间隙锁策略防止幻读的发生</p>
+</li>
+<li><p>基准测试部分没看</p>
+</li>
+<li><p>服务器性能剖析没看</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo 基本命令</title>
     <url>/2021/04/18/hexoCommandLine/</url>
     <content><![CDATA[<p>记录hexo的命令行代码</p>
@@ -325,6 +374,126 @@
         <tag>CMD</tag>
         <tag>HEXO</tag>
         <tag>BLOG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql必知必会</title>
+    <url>/2021/05/07/mysql%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/</url>
+    <content><![CDATA[<ul>
+<li>mysql必知必会读书笔记</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="order-by-默认不区分大小写，但是是可以通过设置更改的"><a href="#order-by-默认不区分大小写，但是是可以通过设置更改的" class="headerlink" title="order by 默认不区分大小写，但是是可以通过设置更改的"></a>order by 默认不区分大小写，但是是可以通过设置更改的</h3><ul>
+<li><p>永久</p>
+<p>将 表的collate改成case sensitive的</p>
+</li>
+<li><p>临时</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> test_collate <span class="keyword">order</span> <span class="keyword">by</span> text <span class="keyword">collate</span> utf8_bin;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Limit"><a href="#Limit" class="headerlink" title="Limit"></a>Limit</h3><ul>
+<li>取前5行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select * from table limit 5</span><br></pre></td></tr></table></figure>
+<ul>
+<li>从第10行开始取前5行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select * from table limit 10，5</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="mysql-使用正则表达式"><a href="#mysql-使用正则表达式" class="headerlink" title="mysql 使用正则表达式"></a>mysql 使用正则表达式</h3><h3 id="全文本搜索"><a href="#全文本搜索" class="headerlink" title="全文本搜索"></a>全文本搜索</h3><ul>
+<li>MyISAM引擎支持全文本搜索</li>
+<li>InnoDB引擎不支持全文本搜索</li>
+<li>为例进行全文本搜索，必须索引被搜索的列</li>
+<li>下列create 语句演示了fulltext子句的使用，从而支持全文搜索</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210507142059.png"
+                      alt="截屏2021-05-07 下午2.20.56"
+                ></p>
+<ul>
+<li><p>定义 fulltext 之后，增加、更新、删除都会更新索引</p>
+</li>
+<li><p>导入数据到一个新表时，先不要建立索引，有利于更快的导入数据</p>
+</li>
+<li><p>使用两个函数Match()和Against()执行全文本搜索，其中Match()指定被搜索的列，Against()指定要使用的搜索表达式。</p>
+</li>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210507142610.png"
+                      alt="截屏2021-05-07 下午2.26.08"
+                ></p>
+</li>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210507143319.png"
+                     
+                ></p>
+</li>
+<li><p>Match() 中的字段需要和 fulltext中的字段相同，且顺序相同，索引嘛</p>
+</li>
+<li><p>默认不区分大小写，除非使用 binary</p>
+</li>
+<li><p>全文搜索返回结果会有一个默认的排序，比如：搜索词出现的早的排序等级高，等级由MySQL根据行中词的数目、唯一词的数目、整个索引中词的 总数以及包含该词的行的数目计算出来。正如所见，不包含词rabbit的 行等级为0(因此不被前一例子中的WHERE子句选择)。确实包含词rabbit 的两个行每行都有一个等级值，文本中词靠前的行的等级值比词靠后的行的等级值高。</p>
+</li>
+<li></li>
+</ul>
+<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><ul>
+<li>LOW_PRIORITY <ul>
+<li>降低写的优先级</li>
+<li>INSERT LOW_PRIORITY  INTO …</li>
+<li>MyISAM存储引擎的读锁和写锁是互斥的，读操作执行时产生读锁，写操作执行前产生写锁，写操作检测到存在读锁，则会等待读锁释放后执行，后继操作检测到存在写锁，则会等待写锁释放后执行。</li>
+<li>如果在SQL中指定LOW_PRIORITY，可使写操作的优先级降低，相当于原来的写锁在写操作执行前就会产生，当指定LOW_PRIORITY后，写锁在写操作执行时才会产生，因此可降低读操作的等待时间。</li>
+<li>虽然修改LOW_PRIORITY可降低读操作的等待时间，但由于降低了写操作的优先级，写操作需等待读锁都释放后才可执行，使MySQL队列中有可能堆积写操作。</li>
+</ul>
+</li>
+</ul>
+<h3 id="mysql引擎"><a href="#mysql引擎" class="headerlink" title="mysql引擎"></a>mysql引擎</h3><ul>
+<li>InnoDB<ul>
+<li>可靠的事务处理引擎</li>
+<li>不支持全文本搜索</li>
+</ul>
+</li>
+<li>MEMORY<ul>
+<li>存储在内存，适用临时表，速度快</li>
+<li>功能相当于MyISAM</li>
+</ul>
+</li>
+<li>MyISAM<ul>
+<li>性能极高的引擎</li>
+<li>支持全文本搜索</li>
+<li>不支持事务处理</li>
+</ul>
+</li>
+<li>CSV<ul>
+<li> CSV引擎有点类似Oracle的外部表。它可以将“逗号分隔值（CSV）文件”作为表进行处理，但不支持在这种文件上建立相关索引。在服务器运行中，这种引擎支持从数据库中拷入/拷出CSV文件。如果从电子表格软件输出一个CSV文件，将其存放在MySQL服务器的数据目录中，服务器就能够马上读取相关的CSV文件。同样，如果写数据库到一个CSV表，外部程序也可以立刻读取它。在实现某种类型的日志记录时，CSV表作为一种数据交换格式，特别有用。</li>
+<li>适合将excel文件或者csv文件的数据导入到数据库<ul>
+<li>没有索引，跟MySQL5的数据字典库一样。</li>
+<li>可以直接用任何文本编辑器来编辑数据文件。</li>
+<li>非英文编码问题。我的字符终端和表都是UTF-8的，所以要把上传的CSV文件保存为UTF-8的编码。</li>
+<li>编码转化工具，我这边在WINDOWS下用EDITPLUS来转化，在LINUX下可以用ICONV命令行工具来转化编码。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p><a class="link"   href="https://www.cnblogs.com/axing-articles/p/11413893.html" >https://www.cnblogs.com/axing-articles/p/11413893.html<i class="fas fa-external-link-alt"></i></a></p>
+<ul>
+<li>acid</li>
+<li>隔离级别及其可以避免的问题</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -364,7 +533,116 @@
 <li>重复子问题：子问题会被重复计算好多次的，将子问题的结果存起来，防止重复计算。</li>
 </ol>
 <h5 id="钢条切割问题"><a href="#钢条切割问题" class="headerlink" title="钢条切割问题"></a>钢条切割问题</h5><p>![截屏2021-05-02 下午11.39.23](截屏2021-05-02 下午11.39.23.png)</p>
-<p>最长公共子序列问题</p>
+<ul>
+<li><p>长度为n的钢条可以有2n-1中切割方案，所以当n很大时用暴力求解的方法是行不通的。假设将该钢条切割成k(k的取值为[1,n])段，切割顺序为从钢条的左端开始，那么最有切割方案是：</p>
+<p>n = len1+len2+len3+…+lenk</p>
+<p>将钢条切割为长度是len1，len2，…，lenk的小段，得到最大收益</p>
+<p>rn = p len1+p len2+p len3+…+p lenk</p>
+<p>根据样例给出的价格表，可以得到最大收益值ri（i=1,2,…,10）及对应的切割方案。</p>
+</li>
+<li><p>长度为n的钢条其最大收益值和长度为k和n-k的两条钢条的最大收益值相关。</p>
+<p>我们可以假设长度为n的钢条的最大收益值：</p>
+<p>rn = max(pn,r1+rn-1,r2+rn-2,…,rn-1+r1)，pn为不切割时的价格。</p>
+<p>这样可以通过组合两个相关子问题的最优解，并在所有可能的两段切割方案中选取组合收益最大者，构成原问题的最优解。</p>
+<p>另一种思路：将钢条从左边切割长度为i的一段，只对右边剩下的长度为n-i的一段继续进行切割(递归求解)，对左边的一段则不再进行分割。</p>
+<p>rn = max(pi + rn-i) (i取值范围[1,n])</p>
+<p>在这个公式中，原问题的最优解只包含一个相关子问题(右端剩余部分)的解。</p>
+</li>
+<li><p><strong>自顶向下的递归算法实现</strong></p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;自顶向下递归实现，prof[]是样例给出的价格表</span><br><span class="line">int cutRod(int prof[], int n)</span><br><span class="line">&#123;</span><br><span class="line">    if (n &#x3D;&#x3D; 0)</span><br><span class="line">        return 0;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        int profit &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 1; i &lt;&#x3D; n; i++)</span><br><span class="line">            profit &#x3D; max(profit, prof[i] + cutRod(prof, n - i));</span><br><span class="line">        return profit;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>使用动态规划方法求解钢条切割的最优化问题</p>
+<ul>
+<li>带备忘的自顶向下法</li>
+<li>备忘就是一张存储每次计算最佳收益的表，这样就可以避免“自顶向下递归算法”中出现的重复计算重叠子问题的情况。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int memoizedCutRodAux(int pro[], int r[], int n)</span><br><span class="line">&#123;</span><br><span class="line">    if (r[n] &gt; 0)</span><br><span class="line">        return r[n];</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        int profit &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 1; i &lt;&#x3D; n; i++)</span><br><span class="line">            profit &#x3D; max(profit, pro[i] + memoizedCutRodAux(pro, r, n - i));</span><br><span class="line">        r[n] &#x3D; profit;</span><br><span class="line">        return profit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>自底向上法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int bottomUpCutRod(int pro[], int r[], int n)</span><br><span class="line">&#123;</span><br><span class="line">    for (int i &#x3D; 1; i &lt;&#x3D; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        int profit &#x3D; 0;</span><br><span class="line">        for (int j &#x3D; 1; j &lt;&#x3D; i; j++)</span><br><span class="line">            profit &#x3D; max(profit, pro[j] + r[i - j]);</span><br><span class="line">        r[i] &#x3D; profit;</span><br><span class="line">    &#125;</span><br><span class="line">    return r[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>现在把思路一中rn = max(pn,r1+rn-1,r2+rn-2,…,rn-1+r1)的算法给出</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int bottomUpCutRodTwo(int pro[], int r[], int n)</span><br><span class="line">&#123;</span><br><span class="line">    for (int i &#x3D; 1; i &lt;&#x3D; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        int profit &#x3D; pro[i];</span><br><span class="line">        for (int j &#x3D; 1; j &lt;&#x3D; i &#x2F; 2; j++)</span><br><span class="line">            profit &#x3D; max(profit, r[j] + r[i - j]);</span><br><span class="line">        r[i] &#x3D; profit;</span><br><span class="line">    &#125;</span><br><span class="line">    return r[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210522130105.png"
+                      alt="702782-20151120142101671-1918163657"
+                ></p>
+<ul>
+<li><p>可以看出该图是一个有向图，每个顶点唯一地对应一个子问题，若是求子问题x的最优解时需要直接用到其子问题y的最优解，那么在子问题图中就会有一条从子问题x的顶点到子问题y的顶点的有向边。子问题G=(V,E)的规模可以确定动态规划的运行时间，由于每个子问题只求解一次，因此算法的运行时间等于每个子问题求解时间之和。通常，一个子问题的求解时间与子问题图中对应顶点的出度成正比，而子问题的数目等于子问题图中顶点数。因此，通常情况下，动态规划的运行时间与顶点和边的数量呈线性关系。</p>
+</li>
+<li><p>总结：</p>
+<ul>
+<li><p>结合动态规划的算法设计步骤来说，钢条切割问题也是遵守其标准的。</p>
+</li>
+<li><p>第一步先确定最优化解的结构特征：最优切割方案是由第一次切割后得到的两段钢条的最优切割方案组成的，或者是第一次切割后，其右端剩余部分的最优切割方案组成的。</p>
+</li>
+<li><p>第二步递归定义最优解的值，由上面的分析我们可以得到rn = max(pn,r1+rn-1,r2+rn-2,…,rn-1+r1)和rn = max(pi + rn-i) 两个最优解的公式，其满足求得原问题最优解的条件。</p>
+</li>
+<li><p>第三步根据得到的求最优解公式，计算出结果。我们用到了两种方法：带备忘的自顶向下递归法和自底向上法（非递归）。</p>
+</li>
+<li><p>第四步构造出最优解。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="最长公共子序列问题"><a href="#最长公共子序列问题" class="headerlink" title="最长公共子序列问题"></a>最长公共子序列问题</h5><ul>
+<li><strong>问题：例如：X={A,B,C,B,A,D,B}，Y={B,C,B,A,A,C}，那么，二者的最长公共子序列是{B,C,B,A}，长度为4。</strong></li>
+</ul>
+<p><strong>我们首先需要搞清楚以下两个概念：</strong></p>
+<p><strong>最长公共子序列 VS 最长公共子串：</strong></p>
+<p>找两个字符串的最长公共子串，这个子串要求在原字符串中是连续的。而最长公共子序列则并不要求连续。</p>
+<p>上述问题中的最长公共子序列与最长公共子串是一样的。</p>
+<p>但是再举例<strong>X={A,B,C,B,A,D,B}，Y={B,C,B,A,A,B}，\</strong>二者的最长公共子序列是**{B,C,B,A,B}，而二者的最长公共子串是{B,C,B,A}。** </p>
+<ul>
+<li><p><strong>求解思路：</strong></p>
+<p><strong>1.分析最优解的结构特征：</strong></p>
+<p>设Zk={z1,z2,z3,……zk}是Xm={x1,x2,x3,……xm}和Yn={y1,y2,y3,……yn}的最长公共子序列。</p>
+<p>则可以得到：</p>
+<p>若xm=yn=zk，那么Zk-1={z1,z2,z3,……zk-1}是Xm-1={x1,x2,x3,……xm-1}和Yn-1={y1,y2,y3,……yn-1}的最长公共子序列；</p>
+<p>若xm≠yn，xm≠zk，则去除xm后，Zk={z1,z2,z3,……zk}仍然是Xm-1={x1,x2,x3,……xm-1}和Yn={y1,y2,y3,……yn}的最长公共子序列；</p>
+<p>若xm≠yn，yn≠zk，则去除yn后，Zk={z1,z2,z3,……zk}仍然是Xm={x1,x2,x3,……xm}和Yn-1={y1,y2,y3,……yn-1}的最长公共子序列；</p>
+<p><strong>2.建立最优值的递归式</strong></p>
+<p>数据结构选择：</p>
+<p>用c[i][j]表示Xi和Yj的最长公共子序列长度（这一步很关键，越到右下角，值会越来越大，我们最后只需要选取右下角的值就可以确定最长公共子序列的长度）</p>
+<p>讨论：</p>
+<p>若xi=yj=zk，那么c[i][j] = c[i-1][j-1] + 1；</p>
+<p>若xi≠yj，xi≠zk，那么Xi需要进一步缩小一个长度进行匹配，即去除xi不影响整体的最长子序列变化，c[i][j] = c[i-1][j] ；</p>
+<p>若xi≠yj，yj≠zk，那么Yj需要进一步缩小一个长度进行匹配，即去除yj不影响整体的最长子序列变化，c[i][j] = c[i][j-1] ；</p>
+<p>结束条件，若i=0或者j=0，则c[i][j]=0。</p>
+<p>所以，在xi≠yj的情况下，有两种情况，c[i][j]必等于两种情况下的最大值，即c[i][j] = max(c[i-1][j], c[i][j-1])</p>
+<p><strong>3.自底向上计算最优值，并记录最优值与最优策略</strong></p>
+<p>我们由上面可以知道，c[0][j]=0或者c[i][0]=0.</p>
+<p>先使i = 1，则求x1与{y1,y2,y3,……yn}逐一比较。如图，x1≠y1，执行c[1][1] = max(c[0][1], c[1][0]) =0，接着，x1=y2，则执行，c[1][2] = c[0][1] + 1=1 ，接着，x1≠y3，则执行c[1][3] = max(c[0][3], c[1][2]) =1，……这样就求出了X1与Yn的最长公共子序列长度；</p>
+<p>然后，i = 2，则建立在x1比较的基础上就可以求出{x1,x2}与{y1,y2,y3,……yn}的最长公共子序列长度；</p>
+<p>然后，i = 3，建立在{x1,x2}的基础上，则可以求出{x1,x2,x3}与{y1,y2,y3,……yn}的最长公共子序列长度；</p>
+<p>……</p>
+<p>然后，i = m，建立在{x1,x2,……xm-1}的基础上，则可以求出{x1,x2,……xm-1}与{y1,y2,y3,……yn}的最长公共子序列长度；</p>
+<p><strong>4.构造最优解</strong></p>
+<p>在知道了最长公共子序列的长度之后，我们还需要知道最长公共子序列中都是哪些元素。我们在c[i][j]数组的右下角能够得到最长公共子序列的长度，那么，我们可以反向推出这个元素分别是什么。</p>
+<p>由上述，我们可以得到：</p>
+<p>若xi=yj=zk，c[i][j] = c[i-1][j-1] + 1；</p>
+<p>若xi≠yj，xi≠zk，c[i][j] = c[i-1][j] ；</p>
+<p>若xi≠yj，yj≠zk，c[i][j] = c[i][j-1] ；</p>
+<p>所以，c[i][j]由上述三个等式中的一个得到，那么我们只需要记录下c[i][j]是从三个等式中哪一个得到的，那么对应的元素我们就知道了。</p>
+<p>这样，我们就必须在借助一个数组就行保存了，我们建立新的数组b[i][j]来记录是从哪个等式中得到，即构造出下列结构。</p>
+<p>若xi=yj=zk，c[i][j] = c[i-1][j-1] + 1，则b[i][j] = 1，那么我们就可以取出xi或者yj作为最长公共子序列中的元素；</p>
+<p>若xi≠yj，yj≠zk，c[i][j] = c[i][j-1]，则b[i][j] = 2，那么我们就可以去追踪c[i][j-1]；</p>
+<p>若xi≠yj，xi≠zk，c[i][j] = c[i-1][j] ，则b[i][j] = 3，那么我们就可以去追踪c[i-1][j]；</p>
+<p>追踪到i=0或者j=0，停止，如下图则是根据c[i][j]取值的来源将b[i][j]数组补充完整</p>
+<p>我们由上述构造b[i][j]的方法得知，若 b[i][j]= 2，那么我们去追踪c[i][j-1]，若b[i][j]= 3，那么我们去追踪c[i-1][j]，换言之，就是b[i][j]= 2，就往左找，b[i][j]= 3，就往右找，若b[i][j]= 1，就可以输出此时的xi或者yj；</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N&#x3D;1024;</span><br><span class="line">int c[N][N],b[N][N];</span><br><span class="line">char s1[N],s2[N];</span><br><span class="line">int len1,len2;</span><br><span class="line">void LCS()</span><br><span class="line">&#123;</span><br><span class="line">    for(int i &#x3D; 1; i &lt;&#x3D; len1; i++)&#123;</span><br><span class="line">        for(int j &#x3D; 1; j &lt;&#x3D; len2; j++)&#123;</span><br><span class="line">            if(s1[i-1] &#x3D;&#x3D; s2[j-1])&#123; &#x2F;&#x2F;注：此处的s1与s2序列是从s1[0]与s2[0]开始的</span><br><span class="line">                c[i][j] &#x3D; c[i-1][j-1] + 1;</span><br><span class="line">                b[i][j] &#x3D; 1;</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                if(c[i][j-1] &gt;&#x3D; c[i-1][j])&#123;</span><br><span class="line">                    c[i][j] &#x3D; c[i][j-1];</span><br><span class="line">                    b[i][j] &#x3D; 2;</span><br><span class="line">                &#125;</span><br><span class="line">                else&#123;</span><br><span class="line">                    c[i][j] &#x3D; c[i-1][j];</span><br><span class="line">                    b[i][j] &#x3D;3;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void LCS_PRINT(int i, int j)</span><br><span class="line">&#123;</span><br><span class="line">    if(i&#x3D;&#x3D;0 || j&#x3D;&#x3D;0)&#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    if(b[i][j] &#x3D;&#x3D; 1)&#123;</span><br><span class="line">        LCS_PRINT(i-1,j-1);</span><br><span class="line">        cout &lt;&lt; s1[i-1];</span><br><span class="line">    &#125;</span><br><span class="line">    else if(b[i][j] &#x3D;&#x3D; 2)&#123;</span><br><span class="line">        LCS_PRINT(i,j-1);</span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">        LCS_PRINT(i-1,j);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;请输入X字符串&quot; &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; s1;</span><br><span class="line">    cout &lt;&lt; &quot;请输入Y字符串&quot; &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; s2;</span><br><span class="line">    len1 &#x3D; strlen(s1);</span><br><span class="line">    len2 &#x3D; strlen(s2);</span><br><span class="line">    for(int i &#x3D; 0; i &lt;&#x3D; len1; i++)&#123;</span><br><span class="line">        c[i][0] &#x3D; 0;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int j &#x3D; 0; j &lt;&#x3D; len2; j++)&#123;</span><br><span class="line">        c[0][j] &#x3D; 0;</span><br><span class="line">    &#125;</span><br><span class="line">    LCS();</span><br><span class="line">    cout &lt;&lt; &quot;s1与s2的最长公共子序列的长度是：&quot; &lt;&lt; c[len1][len2] &lt;&lt;endl;</span><br><span class="line">    cout &lt;&lt; &quot;s1与s2的最长公共子序列是：&quot;;</span><br><span class="line">    LCS_PRINT(len1,len2);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
@@ -389,6 +667,48 @@
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for (int i &#x3D; 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">    int j &#x3D; i;</span><br><span class="line">    while (j &gt; 0)&#123;</span><br><span class="line">        if (arr[j] &lt; arr[j-1])&#123;</span><br><span class="line">            int temp ;</span><br><span class="line">            temp &#x3D; arr[j];</span><br><span class="line">            arr[j] &#x3D; arr[j-1];</span><br><span class="line">            arr[j-1] &#x3D; temp;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>也称递减增量排序算法，是插入排序的一种更高效的改进版本。但希尔排序是非稳定排序算法。</p>
+<p>希尔排序是基于插入排序的以下两点性质而提出改进方法的：</p>
+<p>插入排序在对几乎已经排好序的数据操作时， 效率高， 即可以达到线性排序的效率<br>但插入排序一般来说是低效的， 因为插入排序每次只能将数据移动一位<br>希尔排序的基本思想是：先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。</p>
+<ul>
+<li>算法步骤</li>
+</ul>
+<p>1）选择一个增量序列t1，t2，…，tk，其中ti&gt;tj，tk=1；</p>
+<p>2）按增量序列个数k，对序列进行k 趟排序；</p>
+<p>3）每趟排序，根据对应的增量ti，将待排序列分割成若干长度为m的子序列，分别对各子表进行直接插入排序。仅增量因子为1 时，整个序列作为一个表来处理，表长度即为整个序列的长度。</p>
+<ul>
+<li>代码实现</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 代码实现一</span><br><span class="line">void shell_sort(int num[], int len)</span><br><span class="line">&#123;</span><br><span class="line">    int i, j, k, group, temp;</span><br><span class="line">    for (group &#x3D; len &#x2F; 2; group &gt; 0; group &#x2F;&#x3D; 2)</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F;对每个分组进行插入排序</span><br><span class="line">        for (i &#x3D; 0; i &lt; group; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            for (j &#x3D; i + group; j &lt; len; j +&#x3D; group)</span><br><span class="line">            &#123;</span><br><span class="line">                if (num[j - group] &gt; num[j])</span><br><span class="line">                &#123;</span><br><span class="line">                    temp &#x3D; num[j];</span><br><span class="line">                    k &#x3D; j - group;</span><br><span class="line">                    while(k &gt;&#x3D; 0 &amp;&amp; num[k] &gt; temp)</span><br><span class="line">                    &#123;</span><br><span class="line">                        num[k + group] &#x3D; num[k];</span><br><span class="line">                        k -&#x3D; group;</span><br><span class="line">                    &#125;</span><br><span class="line">                    num[k + group] &#x3D; temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 代码实现二</span><br><span class="line">void shell_sort(int *num, int len)</span><br><span class="line">&#123;</span><br><span class="line">    for (int d &#x3D; len &#x2F; 2; d &gt; 0; d &#x2F;&#x3D; 2)</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F;每个元素与其组内的元素进行插入排序</span><br><span class="line">        for (int i &#x3D; d; i &lt; len; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            int temp &#x3D; num[i];</span><br><span class="line">            int j &#x3D; i;</span><br><span class="line">            while (j &gt;&#x3D; d &amp;&amp; num[j - d] &gt; temp)</span><br><span class="line">            &#123;</span><br><span class="line">                num[j] &#x3D; num[j - d];</span><br><span class="line">                j -&#x3D; d;</span><br><span class="line">            &#125;</span><br><span class="line">            num[j] &#x3D; temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>选择排序(Selection sort)也是一种简单直观的排序算法。</p>
+<ul>
+<li>算法步骤</li>
+</ul>
+<p>1）首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置</p>
+<p>2）再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。</p>
+<p>3）重复第二步，直到所有元素均排序完毕。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void selection_sort(int num[], int len)</span><br><span class="line">&#123;</span><br><span class="line">    for (int i &#x3D; 0; i &lt; len - 1; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        int j &#x3D; i;</span><br><span class="line">        for (int k &#x3D; i + 1; k &lt; len; k++)</span><br><span class="line">        &#123;</span><br><span class="line">            if (num[k] &lt; num[j])</span><br><span class="line">            &#123;</span><br><span class="line">                j &#x3D; k;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (j !&#x3D; i)</span><br><span class="line">        &#123;</span><br><span class="line">            int temp &#x3D; num[j];</span><br><span class="line">            num[j] &#x3D; num[i];</span><br><span class="line">            num[i] &#x3D; temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>冒泡排序（Bubble sort）也是一种简单直观的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。</p>
+<ul>
+<li>算法步骤</li>
+</ul>
+<p>1）比较相邻的元素。如果第一个比第二个大，就交换他们两个。</p>
+<p>2）对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的数。</p>
+<p>3）针对所有的元素重复以上的步骤，除了最后一个。</p>
+<p>4）持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</p>
+<ul>
+<li>实现代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void bubble_sort(int num[], int len)</span><br><span class="line">&#123;</span><br><span class="line">    bool exchange;</span><br><span class="line">    for (int i &#x3D; 0; i &lt; len - 1; i++)</span><br><span class="line">    &#123;</span><br><span class="line">       exchange &#x3D; false;</span><br><span class="line">       for (int j &#x3D; 0; j &lt; len - i - 1; j++)</span><br><span class="line">       &#123;</span><br><span class="line">           if (num[j] &gt; num[j + 1])</span><br><span class="line">           &#123;</span><br><span class="line">               int temp &#x3D; num[j];</span><br><span class="line">               num[j] &#x3D; num[j + 1];</span><br><span class="line">               num[j + 1] &#x3D; temp;</span><br><span class="line">               exchange &#x3D; true;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       if (!exchange)</span><br><span class="line">       &#123;</span><br><span class="line">           return;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 <h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><ul>
@@ -430,35 +750,6 @@
                      data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210518201754.png"
                       alt="截屏2021-05-18 下午8.17.51"
                 ></p>
-<h3 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h3><ul>
-<li><p><a class="link"   href="https://www.cnblogs.com/chengxiao/p/6129630.html" >https://www.cnblogs.com/chengxiao/p/6129630.html<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>Heapify()</p>
-</li>
-<li><p>BuildHeap()</p>
-</li>
-<li><p>Heapsort()</p>
-</li>
-</ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210520192454.png"
-                      alt="1024555-20161217182750011-675658660"
-                ></p>
-<ul>
-<li><p><strong>堆排序的基本思想是：将待排序序列构造成一个大顶堆，此时，整个序列的最大值就是堆顶的根节点。将其与末尾元素进行交换，此时末尾就为最大值。然后将剩余n-1个元素重新构造成一个堆，这样会得到n个元素的次小值。如此反复执行，便能得到一个有序序列了</strong></p>
-</li>
-<li><p><strong>步骤一 构造初始堆。将给定无序序列构造成一个大顶堆（一般升序采用大顶堆，降序采用小顶堆)。</strong></p>
-</li>
-<li><p><strong>步骤二 将堆顶元素与末尾元素进行交换，使末尾元素最大。然后继续调整堆，再将堆顶元素与末尾元素交换，得到第二大元素。如此反复进行交换、重建、交换。</strong></p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">再简单总结下堆排序的基本思路：</span><br><span class="line"></span><br><span class="line">　　a.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;</span><br><span class="line"></span><br><span class="line">　　b.将堆顶元素与末尾元素交换，将最大元素&quot;沉&quot;到数组末端;</span><br><span class="line"></span><br><span class="line">　　c.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。</span><br><span class="line">　　</span><br><span class="line"></span><br><span class="line">package sortdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by chengxiao on 2016&#x2F;12&#x2F;17.</span><br><span class="line"> * 堆排序demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class HeapSort &#123;</span><br><span class="line">    public static void main(String []args)&#123;</span><br><span class="line">        int []arr &#x3D; &#123;9,8,7,6,5,4,3,2,1&#125;;</span><br><span class="line">        sort(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sort(int []arr)&#123;</span><br><span class="line">        &#x2F;&#x2F;1.构建大顶堆</span><br><span class="line">        for(int i&#x3D;arr.length&#x2F;2-1;i&gt;&#x3D;0;i--)&#123;</span><br><span class="line">            &#x2F;&#x2F;从第一个非叶子结点从下至上，从右至左调整结构</span><br><span class="line">            adjustHeap(arr,i,arr.length);</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;2.调整堆结构+交换堆顶元素与末尾元素</span><br><span class="line">        for(int j&#x3D;arr.length-1;j&gt;0;j--)&#123;</span><br><span class="line">            swap(arr,0,j);&#x2F;&#x2F;将堆顶元素与末尾元素进行交换</span><br><span class="line">            adjustHeap(arr,0,j);&#x2F;&#x2F;重新对堆进行调整</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 调整大顶堆（仅是调整过程，建立在大顶堆已构建的基础上）</span><br><span class="line">     * @param arr</span><br><span class="line">     * @param i</span><br><span class="line">     * @param length</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public static void adjustHeap(int []arr,int i,int length)&#123;</span><br><span class="line">        int temp &#x3D; arr[i];&#x2F;&#x2F;先取出当前元素i</span><br><span class="line">        for(int k&#x3D;i*2+1;k&lt;length;k&#x3D;k*2+1)&#123;&#x2F;&#x2F;从i结点的左子结点开始，也就是2i+1处开始</span><br><span class="line">            if(k+1&lt;length &amp;&amp; arr[k]&lt;arr[k+1])&#123;&#x2F;&#x2F;如果左子结点小于右子结点，k指向右子结点</span><br><span class="line">                k++;</span><br><span class="line">            &#125;</span><br><span class="line">            if(arr[k] &gt;temp)&#123;&#x2F;&#x2F;如果子节点大于父节点，将子节点值赋给父节点（不用进行交换）</span><br><span class="line">                arr[i] &#x3D; arr[k];</span><br><span class="line">                i &#x3D; k;</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[i] &#x3D; temp;&#x2F;&#x2F;将temp值放到最终的位置</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 交换元素</span><br><span class="line">     * @param arr</span><br><span class="line">     * @param a</span><br><span class="line">     * @param b</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public static void swap(int []arr,int a ,int b)&#123;</span><br><span class="line">        int temp&#x3D;arr[a];</span><br><span class="line">        arr[a] &#x3D; arr[b];</span><br><span class="line">        arr[b] &#x3D; temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
 <h3 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h3><ul>
 <li><p><strong>核心思想：分治</strong></p>
 </li>
@@ -494,6 +785,63 @@
 <ul>
 <li><a class="link"   href="https://blog.csdn.net/qq_41384351/article/details/89812789" >https://blog.csdn.net/qq_41384351/article/details/89812789<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
+<h3 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h3><ul>
+<li><p><a class="link"   href="https://www.cnblogs.com/chengxiao/p/6129630.html" >https://www.cnblogs.com/chengxiao/p/6129630.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>Heapify()</p>
+</li>
+<li><p>BuildHeap()</p>
+</li>
+<li><p>Heapsort()</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://raw.githubusercontent.com/LoveIceCream/imageStorage/main/20210520192454.png"
+                      alt="1024555-20161217182750011-675658660"
+                ></p>
+<ul>
+<li><p><strong>堆排序的基本思想是：将待排序序列构造成一个大顶堆，此时，整个序列的最大值就是堆顶的根节点。将其与末尾元素进行交换，此时末尾就为最大值。然后将剩余n-1个元素重新构造成一个堆，这样会得到n个元素的次小值。如此反复执行，便能得到一个有序序列了</strong></p>
+</li>
+<li><p><strong>步骤一 构造初始堆。将给定无序序列构造成一个大顶堆（一般升序采用大顶堆，降序采用小顶堆)。</strong></p>
+</li>
+<li><p><strong>步骤二 将堆顶元素与末尾元素进行交换，使末尾元素最大。然后继续调整堆，再将堆顶元素与末尾元素交换，得到第二大元素。如此反复进行交换、重建、交换。</strong></p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">再简单总结下堆排序的基本思路：</span><br><span class="line"></span><br><span class="line">　　a.将无需序列构建成一个堆，根据升序降序需求选择大顶堆或小顶堆;</span><br><span class="line"></span><br><span class="line">　　b.将堆顶元素与末尾元素交换，将最大元素&quot;沉&quot;到数组末端;</span><br><span class="line"></span><br><span class="line">　　c.重新调整结构，使其满足堆定义，然后继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序。</span><br><span class="line">　　</span><br><span class="line"></span><br><span class="line">package sortdemo;</span><br><span class="line"></span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * Created by chengxiao on 2016&#x2F;12&#x2F;17.</span><br><span class="line"> * 堆排序demo</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class HeapSort &#123;</span><br><span class="line">    public static void main(String []args)&#123;</span><br><span class="line">        int []arr &#x3D; &#123;9,8,7,6,5,4,3,2,1&#125;;</span><br><span class="line">        sort(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">    public static void sort(int []arr)&#123;</span><br><span class="line">        &#x2F;&#x2F;1.构建大顶堆</span><br><span class="line">        for(int i&#x3D;arr.length&#x2F;2-1;i&gt;&#x3D;0;i--)&#123;</span><br><span class="line">            &#x2F;&#x2F;从第一个非叶子结点从下至上，从右至左调整结构</span><br><span class="line">            adjustHeap(arr,i,arr.length);</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;2.调整堆结构+交换堆顶元素与末尾元素</span><br><span class="line">        for(int j&#x3D;arr.length-1;j&gt;0;j--)&#123;</span><br><span class="line">            swap(arr,0,j);&#x2F;&#x2F;将堆顶元素与末尾元素进行交换</span><br><span class="line">            adjustHeap(arr,0,j);&#x2F;&#x2F;重新对堆进行调整</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 调整大顶堆（仅是调整过程，建立在大顶堆已构建的基础上）</span><br><span class="line">     * @param arr</span><br><span class="line">     * @param i</span><br><span class="line">     * @param length</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public static void adjustHeap(int []arr,int i,int length)&#123;</span><br><span class="line">        int temp &#x3D; arr[i];&#x2F;&#x2F;先取出当前元素i</span><br><span class="line">        for(int k&#x3D;i*2+1;k&lt;length;k&#x3D;k*2+1)&#123;&#x2F;&#x2F;从i结点的左子结点开始，也就是2i+1处开始</span><br><span class="line">            if(k+1&lt;length &amp;&amp; arr[k]&lt;arr[k+1])&#123;&#x2F;&#x2F;如果左子结点小于右子结点，k指向右子结点</span><br><span class="line">                k++;</span><br><span class="line">            &#125;</span><br><span class="line">            if(arr[k] &gt;temp)&#123;&#x2F;&#x2F;如果子节点大于父节点，将子节点值赋给父节点（不用进行交换）</span><br><span class="line">                arr[i] &#x3D; arr[k];</span><br><span class="line">                i &#x3D; k;</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[i] &#x3D; temp;&#x2F;&#x2F;将temp值放到最终的位置</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 交换元素</span><br><span class="line">     * @param arr</span><br><span class="line">     * @param a</span><br><span class="line">     * @param b</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public static void swap(int []arr,int a ,int b)&#123;</span><br><span class="line">        int temp&#x3D;arr[a];</span><br><span class="line">        arr[a] &#x3D; arr[b];</span><br><span class="line">        arr[b] &#x3D; temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><p>基数排序是一种非比较型整数排序算法，其原理是将整数按位数切割成不同的数字，然后按每个位数分别比较。由于整数也可以表达字符串（比如名字或日期）和特定格式的浮点数，所以基数排序也不是只能使用于整数。</p>
+<p>说基数排序之前，我们简单介绍桶排序：</p>
+<p>算法思想：是将阵列分到有限数量的桶子里。每个桶子再个别排序（有可能再使用别的排序算法或是以递回方式继续使用桶排序进行排序）。桶排序是鸽巢排序的一种归纳结果。当要被排序的阵列内的数值是均匀分配的时候，桶排序使用线性时间（Θ（n））。但桶排序并不是比较排序，他不受到 O(n log n) 下限的影响。<br>简单来说，就是把数据分组，放在一个个的桶中，然后对每个桶里面的在进行排序。</p>
+<p>例如要对大小为[1…1000]范围内的n个整数A[1…n]排序</p>
+<p>首先，可以把桶设为大小为10的范围，具体而言，设集合B[1]存储[1…10]的整数，集合B[2]存储 (10…20]的整数，……集合B[i]存储( (i-1)10, i10]的整数，i = 1,2,…100。总共有 100个桶。</p>
+<p>然后，对A[1…n]从头到尾扫描一遍，把每个A[i]放入对应的桶B[j]中。再对这100个桶中每个桶里的数字排序，这时可用冒泡，选择，乃至快排，一般来说任何排序法都可以。</p>
+<p>最后，依次输出每个桶里面的数字，且每个桶中的数字从小到大输出，这样就得到所有数字排好序的一个序列了。</p>
+<p>假设有n个数字，有m个桶，如果数字是平均分布的，则每个桶里面平均有n/m个数字。如果对每个桶中的数字采用快速排序，那么整个算法的复杂度是</p>
+<p>O(n + m * n/m*log(n/m)) = O(n + nlogn – nlogm)</p>
+<p>从上式看出，当m接近n的时候，桶排序复杂度接近O(n)</p>
+<p>当然，以上复杂度的计算是基于输入的n个数字是平均分布这个假设的。这个假设是很强的 ，实际应用中效果并没有这么好。如果所有的数字都落在同一个桶中，那就退化成一般的排序了。</p>
+<p>前面说的几大排序算法 ，大部分时间复杂度都是O（n2），也有部分排序算法时间复杂度是O(nlogn)。而桶式排序却能实现O（n）的时间复杂度。但桶排序的缺点是：</p>
+<p>1）首先是空间复杂度比较高，需要的额外开销大。排序有两个数组的空间开销，一个存放待排序数组，一个就是所谓的桶，比如待排序值是从0到m-1，那就需要m个桶，这个桶数组就要至少m个空间。</p>
+<p>2）其次待排序的元素都要在一定的范围内等等。</p>
+<ul>
+<li>实现代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;获取最大位数</span><br><span class="line">int max_bit(int num[], int len)</span><br><span class="line">&#123;</span><br><span class="line">    int bit &#x3D; 1;</span><br><span class="line">    int radix &#x3D; 10;</span><br><span class="line">    for (int i &#x3D; 0; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        while (num[i] &gt;&#x3D; radix)</span><br><span class="line">        &#123;</span><br><span class="line">            radix *&#x3D; 10;</span><br><span class="line">            bit++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return bit;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void radix_sort(int num[], int len)</span><br><span class="line">&#123;</span><br><span class="line">    int bitCount &#x3D; max_bit(num, len);</span><br><span class="line">    int *tmp &#x3D; new int[len];</span><br><span class="line">    int *count &#x3D; new int[10];  &#x2F;&#x2F;计数器</span><br><span class="line"></span><br><span class="line">    int radix &#x3D; 1;</span><br><span class="line">    int i, j, k;</span><br><span class="line">    for(i &#x3D; 0; i &lt; bitCount; i++)  &#x2F;&#x2F;进行bitCount次排序</span><br><span class="line">    &#123;</span><br><span class="line">        for(j &#x3D; 0; j &lt; 10; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            count[j] &#x3D; 0;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        for(j &#x3D; 0; j &lt; len; j++)  &#x2F;&#x2F;统计每个桶中的记录数</span><br><span class="line">        &#123;</span><br><span class="line">            k &#x3D; (num[j] &#x2F; radix) % 10;</span><br><span class="line">            count[k]++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        for (j &#x3D; 1; j &lt; 10; j++)  &#x2F;&#x2F;将tmp中的位置一次分配给每个桶</span><br><span class="line">        &#123;</span><br><span class="line">            count[j] &#x3D; count[j] + count[j - 1];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        for (j &#x3D; len - 1; j &gt;&#x3D; 0; j--)  &#x2F;&#x2F;将所有桶中记录收集到tmp中</span><br><span class="line">        &#123;</span><br><span class="line">            k &#x3D; (num[j] &#x2F; radix) % 10;</span><br><span class="line">            tmp[count[k] - 1] &#x3D; num[j];</span><br><span class="line">            count[k]--;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        for (j &#x3D; 0; j &lt; len; j++)  &#x2F;&#x2F;复制临时数组的内容到data</span><br><span class="line">        &#123;</span><br><span class="line">            num[j] &#x3D; tmp[j];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        radix *&#x3D; 10;</span><br><span class="line">    &#125;</span><br><span class="line">    delete [] tmp;</span><br><span class="line">    delete [] count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h3><ul>
+<li>算法思想</li>
+</ul>
+<p>假定输入是有一个小范围内的整数构成的（比如年龄等），利用额外的数组去记录元素应该排列的位置，思想比较简单。<br>特点：在一定限制下时间复杂度为O(n)，额外空间O(n)（需要两个数组），稳定排序！</p>
+<ul>
+<li>实现代码 </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;假定数组中元素的取值范围是[0,k]，因此需分配k+1个内存空间</span><br><span class="line">void counting_sort(int num[], int len, int k)</span><br><span class="line">&#123;</span><br><span class="line">    int *count &#x3D; new int[k + 1];</span><br><span class="line">    int *tmp &#x3D; new int[len];</span><br><span class="line">    for (int i &#x3D; 0; i &lt; k; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        count[i] &#x3D; 0;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i &#x3D; 0; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        count[num[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i &#x3D; 1; i &lt; k; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        count[i] +&#x3D; count[i - 1];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    int index;</span><br><span class="line">    for (int i &#x3D; 0; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        index &#x3D; count[num[i]];</span><br><span class="line">        tmp[index - 1] &#x3D; num[i];</span><br><span class="line">        count[num[i]]--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (int i &#x3D; 0; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        num[i] &#x3D; tmp[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
@@ -815,7 +1163,295 @@
 
 
 <h3 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h3><ul>
-<li>在对问题求解的时候，只看重当前最优的情况，不保证最优解，但是在好多问题上能够得到最好的。</li>
+<li><p>在对问题求解的时候，只看重当前最优的情况，不保证最优解，但是在好多问题上能够得到最好的。</p>
+</li>
+<li><p>所谓贪心算法是指，在对问题求解时，总是<strong>做出在当前看来是最好的选择</strong>。也就是说，不从整体最优上加以考虑，它所做出的仅仅是在某种意义上的<strong>局部最优解</strong>。<br>贪心算法没有固定的算法框架，算法设计的关键是贪心策略的选择。必须注意的是，贪心算法不是对所有问题都能得到整体最优解，选择的贪心策略必须具备无后效性（即某个状态以后的过程不会影响以前的状态，只与当前状态有关。）<br><strong>所以，对所采用的贪心策略一定要仔细分析其是否满足无后效性。</strong></p>
+</li>
+<li><p>贪心算法的基本思路</p>
+<ul>
+<li>建立数学模型来描述问题</li>
+<li>把求解的问题分成若干个子问题</li>
+<li>对每个子问题求解，得到子问题的局部最优解</li>
+<li>把子问题的解局部最优解合成原来问题的一个解</li>
+</ul>
+</li>
+<li><p>该算法存在的问题</p>
+<ul>
+<li>不能保证求得的最后解是最佳的</li>
+<li>不能用来求最大值或最小值的问题</li>
+<li>只能求满足某些约束条件的可行解的范围</li>
+</ul>
+</li>
+<li><p>贪心算法适用的问题</p>
+<ul>
+<li><strong>贪心策略适用的前提是：局部最优策略能导致产生全局最优解。</strong><br>实际上，贪心算法适用的情况很少。一般对一个问题分析是否适用于贪心算法，可以先选择该问题下的几个实际数据进行分析，就可以做出判断。</li>
+</ul>
+</li>
+<li><p>贪心选择性质</p>
+<ul>
+<li>所谓贪心选择性质是指所求问题的整体最优解可以通过一系列局部最优的选择，换句话说，当考虑做何种选择的时候，我们只考虑对当前问题最佳的选择而不考虑子问题的结果。这是贪心算法可行的第一个基本要素。贪心算法以迭代的方式作出相继的贪心选择，每作一次贪心选择就将所求问题简化为规模更小的子问题。<strong>对于一个具体问题，要确定它是否具有贪心选择性质，必须证明每一步所作的贪心选择最终导致问题的整体最优解。</strong><br>当一个问题的最优解包含其子问题的最优解时，称此问题具有最优子结构性质。问题的最优子结构性质是该问题可用贪心算法求解的关键特征。</li>
+</ul>
+</li>
+<li><p>贪心算法的实现框架</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">从问题的某一初始解出发：</span><br><span class="line">while (朝给定总目标前进一步)</span><br><span class="line">&#123;</span><br><span class="line">利用可行的决策，求出可行解的一个解元素。</span><br><span class="line">&#125;</span><br><span class="line">由所有解元素组合成问题的一个可行解；</span><br></pre></td></tr></table></figure></li>
+<li><p><a class="link"   href="https://www.cnblogs.com/tianqizhi/p/9571939.html" >https://www.cnblogs.com/tianqizhi/p/9571939.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ul>
+<h1 id="1-贪心算法"><a href="#1-贪心算法" class="headerlink" title="1 贪心算法"></a>1 贪心算法</h1><h2 id="1-1-教室调度问题"><a href="#1-1-教室调度问题" class="headerlink" title="1.1 教室调度问题"></a>1.1 教室调度问题</h2><p>　　假设有如下课程表，你希望将尽可能多的课程安排在某间教室上。</p>
+<p>　　你没法让这些课都在这间教室上，因为有些课的上课时间有冲突。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104130846794-755693956.png"
+                      alt="img"
+                ></p>
+<p>　　你希望在这间教室上尽可能多的课。如何选出尽可能多且时间不冲突的课程呢？这个问题好像很难，不是吗？实际上，算法可能简单得让你大吃一惊。具体做法如下。<br>　　(1) 选出结束最早的课，它就是要在这间教室上的第一堂课。<br>　　(2) 接下来，必须选择第一堂课结束后才开始的课。同样，你选择结束最早的课，这将是要在这间教室上的第二堂课。重复这样做就能找出答案！下面来试一试。美术课的结束时间最早，为10:00 a.m.，因此它就是第一堂课。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104131303677-1865182050.png"
+                      alt="img"
+                ></p>
+<p>　　接下来的课必须在10:00 a.m.后开始，且结束得最早。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104131342309-380111774.png"
+                      alt="img"
+                ></p>
+<p>　　英语课不行，因为它的时间与美术课冲突，但数学课满足条件。最后，计算机课与数学课的时间是冲突的，但音乐课可以。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104131428045-1692213873.png"
+                      alt="img"
+                ></p>
+<p>　　因此将在这间教室上如下三堂课。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104131458776-1127100600.png"
+                      alt="img"
+                ></p>
+<p>　　很多人都跟我说，这个算法太容易、太显而易见，肯定不对。但这正是贪婪算法的优点——简单易行！贪婪算法很简单：每步都采取最优的做法。在这个示例中，你每次都选择结束最早的课。用专业术语说，就是你每步都选择局部最优解，最终得到的就是全局最优解。信不信由你，对于这个调度问题，上述简单算法找到的就是最优解！显然，贪婪算法并非在任何情况下都行之有效，但它易于实现！下面再来看一个例子。</p>
+<h2 id="1-2-背包问题"><a href="#1-2-背包问题" class="headerlink" title="1.2 背包问题"></a>1.2 背包问题</h2><p>　　假设你是个贪婪的小偷，背着可装35磅（1磅≈0.45千克）重东西的背包，在商场伺机盗窃各种可装入背包的商品。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104131934439-414857406.png"
+                      alt="img"
+                ></p>
+<p>　　你力图往背包中装入价值最高的商品，你会使用哪种算法呢？</p>
+<p>　　同样，你采取贪婪策略，这非常简单。</p>
+<p>　　(1) 盗窃可装入背包的最贵商品。<br>　　(2) 再盗窃还可装入背包的最贵商品，以此类推。</p>
+<p>　　只是这次这种贪婪策略不好使了！例如，你可盗窃的商品有下面三种。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104131914087-833867110.png"
+                      alt="img"
+                ></p>
+<p>　　你的背包可装35磅的东西。音响最贵，你把它给偷了，但背包没有空间装其他东西了。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104132135274-599754070.png"
+                      alt="img"
+                ></p>
+<p>　　你偷到了价值3000美元的东西。且慢！如果不是偷音响，而是偷笔记本电脑和吉他，总价将为3500美元！<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104132303594-2087105764.png"
+                      alt="img"
+                ></p>
+<p>　　在这里，贪婪策略显然不能获得最优解，但非常接近。动态规划将介绍如何找出最优解。不过小偷去购物中心行窃时，不会强求所偷东西的总价最高，只要差不多就行了。</p>
+<p>　　从这个示例你得到了如下启示：在有些情况下，完美是优秀的敌人。有时候，你只需找到一个能够大致解决问题的算法，此时贪婪算法正好可派上用场，因为它们实现起来很容易，得到的结果又与正确结果相当接近。</p>
+<p><strong>练习：</strong></p>
+<p>1.你在一家家具公司工作，需要将家具发往全国各地，为此你需要将箱子装上卡车。每个箱子的尺寸各不相同，你需要尽可能利用每辆卡车的空间，为此你将如何选择要装上卡车的箱子呢？请设计一种贪婪算法。使用这种算法能得到最优解吗？</p>
+<p>　　答：种贪婪策略是，选择可装入卡车剩余空间内的最大箱子，并重复这个过程，直到不能再装入箱子为止。使用这种算法不能得到最优解。</p>
+<p>2.你要去欧洲旅行，总行程为7天。对于每个旅游胜地，你都给它分配一个价值——表示你有多想去那里看看，并估算出需要多长时间。你如何将这次旅行的价值最大化？请设计一种贪婪算法。使用这种算法能得到最优解吗？</p>
+<p>　　答：不断地挑选可在余下的时间内完成的价值最大的活动，直到余下的时间不够完成任何活动为止。使用这种算法不能得到最优解。</p>
+<h2 id="1-3集合覆盖问题"><a href="#1-3集合覆盖问题" class="headerlink" title="1.3集合覆盖问题"></a>1.3集合覆盖问题</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104133126889-2110611253.png"
+                      alt="img"
+                ></p>
+<p>　　假设你办了个广播节目，要让全美50个州的听众都收听得到。为此，你需要决定在哪些广播台播出。在每个广播台播出都需要支付费用，因此你力图在尽可能少的广播台播出。现有广播台名单如下。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104133150805-1864463733.png"
+                      alt="img"
+                ></p>
+<p>　　每个广播台都覆盖特定的区域，不同广播台的覆盖区域可能重叠。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104133235360-913276552.png"
+                      alt="img"
+                ></p>
+<p>　　如何找出覆盖全美50个州的最小广播台集合呢？听起来很容易，但其实非常难。具体方法如下。</p>
+<p>　　(1) 列出每个可能的广播台集合，这被称为幂集（power set）。可能的子集有2n个。</p>
+<p>　　(2) 在这些集合中，选出覆盖全美50个州的最小集合。</p>
+<p>　　问题是计算每个可能的广播台子集需要很长时间。由于可能的集合有2n个，因此运行时间为O(2n)。如果广播台不多，只有5～10个，这是可行的。但如果广播台很多，结果将如何呢？随着广播台的增多，需要的时间将激增。假设你每秒可计算10个子集，所需的时间将如下。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104133615767-1526456779.png"
+                      alt="img"
+                ></p>
+<p>　　没有任何算法可以足够快地解决这个问题！怎么办呢？</p>
+<h1 id="2-近似算法"><a href="#2-近似算法" class="headerlink" title="2 近似算法"></a>2 近似算法</h1><p>　　贪婪算法可化解危机！使用下面的贪婪算法可得到非常接近的解。</p>
+<p>　　(1) 选出这样一个广播台，即它覆盖了最多的未覆盖州。即便这个广播台覆盖了一些已覆盖的州，也没有关系。</p>
+<p>　　(2) 重复第一步，直到覆盖了所有的州。</p>
+<p>　　这是一种近似算法（approximation algorithm）。在获得精确解需要的时间太长时，可使用近似算法。判断近似算法优劣的标准如下：</p>
+<ul>
+<li>速度有多快；</li>
+<li>得到的近似解与最优解的接近程度。</li>
+</ul>
+<p>　　贪婪算法是不错的选择，它们不仅简单，而且通常运行速度很快。在这个例子中，贪婪算法的运行时间为O(n2)，其中n为广播台数量。</p>
+<p>　　下面来看看解决这个问题的代码。</p>
+<h3 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h3><p>　　出于简化考虑，这里假设要覆盖的州没有那么多，广播台也没有那么多。</p>
+<p>　　首先，创建一个列表，其中包含要覆盖的州。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">states_needed &#96;&#96;&#x3D;&#96; &#96;set&#96;&#96;([&#96;&#96;&quot;mt&quot;&#96;&#96;, &#96;&#96;&quot;wa&quot;&#96;&#96;, &#96;&#96;&quot;or&quot;&#96;&#96;, &#96;&#96;&quot;id&quot;&#96;&#96;, &#96;&#96;&quot;nv&quot;&#96;&#96;, &#96;&#96;&quot;ut&quot;&#96;&#96;, &#96;&#96;&quot;ca&quot;&#96;&#96;, &#96;&#96;&quot;az&quot;&#96;&#96;])</span><br></pre></td></tr></table></figure>
+<p>　　我使用集合来表示要覆盖的州。集合类似于列表，只是同样的元素只能出现一次，即集合不能包含重复的元素。例如，假设你有如下列表。<br>　　&gt;&gt;&gt; arr = [1, 2, 2, 3, 3, 3] </p>
+<p>　　并且你将其转换为集合。<br>　　&gt;&gt;&gt; set(arr)<br>　　set([1, 2, 3]) </p>
+<p>　　在这个集合中，1、2和3都只出现一次。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104134305362-269298917.png"
+                      alt="img"
+                ></p>
+<p>　　还需要有可供选择的广播台清单，我选择使用散列表来表示它。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">stations &#96;&#96;&#x3D;&#96; &#96;&#123;&#125; &#96;&#96;stations[&#96;&#96;&quot;kone&quot;&#96;&#96;] &#96;&#96;&#x3D;&#96; &#96;set&#96;&#96;([&#96;&#96;&quot;id&quot;&#96;&#96;, &#96;&#96;&quot;nv&quot;&#96;&#96;, &#96;&#96;&quot;ut&quot;&#96;&#96;]) &#96;&#96;stations[&#96;&#96;&quot;ktwo&quot;&#96;&#96;] &#96;&#96;&#x3D;&#96; &#96;set&#96;&#96;([&#96;&#96;&quot;wa&quot;&#96;&#96;, &#96;&#96;&quot;id&quot;&#96;&#96;, &#96;&#96;&quot;mt&quot;&#96;&#96;]) &#96;&#96;stations[&#96;&#96;&quot;kthree&quot;&#96;&#96;] &#96;&#96;&#x3D;&#96; &#96;set&#96;&#96;([&#96;&#96;&quot;or&quot;&#96;&#96;, &#96;&#96;&quot;nv&quot;&#96;&#96;, &#96;&#96;&quot;ca&quot;&#96;&#96;]) &#96;&#96;stations[&#96;&#96;&quot;kfour&quot;&#96;&#96;] &#96;&#96;&#x3D;&#96; &#96;set&#96;&#96;([&#96;&#96;&quot;nv&quot;&#96;&#96;, &#96;&#96;&quot;ut&quot;&#96;&#96;]) &#96;&#96;stations[&#96;&#96;&quot;kfive&quot;&#96;&#96;] &#96;&#96;&#x3D;&#96; &#96;set&#96;&#96;([&#96;&#96;&quot;ca&quot;&#96;&#96;, &#96;&#96;&quot;az&quot;&#96;&#96;]) </span><br></pre></td></tr></table></figure>
+<p> 　其中的键为广播台的名称，值为广播台覆盖的州。在该示例中，广播台kone覆盖了爱达荷州、内达华州和犹他州。所有的值都是集合。你马上将看到，使用集合来表示一切可以简化工作。</p>
+<p>　　最后，需要使用一个集合来存储最终选择的广播台。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">final_stations &#96;&#96;&#x3D;&#96; &#96;set&#96;&#96;() </span><br></pre></td></tr></table></figure>
+<h3 id="2-计算答案"><a href="#2-计算答案" class="headerlink" title="2. 计算答案"></a>2. 计算答案</h3><p>　　接下来需要计算要使用哪些广播台。根据下边的示意图，你能确定应使用哪些广播台吗？<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104134656027-555924294.png"
+                      alt="img"
+                ></p>
+<p>　　正确的解可能有多个。你需要遍历所有的广播台，从中选择覆盖了最多的未覆盖州的广播台。我将这个广播台存储在best_station中。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">best_station &#96;&#96;&#x3D;&#96; &#96;None&#96;&#96;states_covered &#96;&#96;&#x3D;&#96; &#96;set&#96;&#96;() &#96;&#96;for&#96; &#96;station, states_for_station &#96;&#96;in&#96; &#96;stations.items(): </span><br></pre></td></tr></table></figure>
+<p> 　states_covered是一个集合，包含该广播台覆盖的所有未覆盖的州。for循环迭代每个广播台，并确定它是否是最佳的广播台。下面来看看这个for循环的循环体。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">covered &#96;&#96;&#x3D;&#96; &#96;states_needed &amp; states_for_station &#96;&#96;#它计算交集&#96;&#96;if&#96; &#96;len&#96;&#96;(covered) &gt; &#96;&#96;len&#96;&#96;(states_covered):&#96;&#96;  &#96;&#96;best_station &#96;&#96;&#x3D;&#96; &#96;station &#96;&#96;  &#96;&#96;states_covered &#96;&#96;&#x3D;&#96; &#96;covered </span><br></pre></td></tr></table></figure>
+<p>　　下面的代码计算交集。<br>　　covered = states_needed &amp; states_for_station </p>
+<p>　　covered是一个集合，包含同时出现在states_needed和states_for_station中的州；换言之，它包含当前广播台覆盖的一系列还未覆盖的州！接下来，你检查该广播台覆盖的州是否比best_station多。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if&#96; &#96;len&#96;&#96;(covered) &gt; &#96;&#96;len&#96;&#96;(states_covered): &#96;&#96;  &#96;&#96;best_station &#96;&#96;&#x3D;&#96; &#96;station &#96;&#96;  &#96;&#96;states_covered &#96;&#96;&#x3D;&#96; &#96;covered</span><br></pre></td></tr></table></figure>
+<p> 　如果是这样的，就将best_station设置为当前广播台。最后，你在for循环结束后将best_station添加到最终的广播台列表中。</p>
+<p>　　final_stations.add(best_station)<br>　　你还需更新states_needed。由于该广播台覆盖了一些州，因此不用再覆盖这些州。<br>　　states_needed -= states_covered<br>　　你不断地循环，直到states_needed为空。这个循环的完整代码如下。 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">while&#96; &#96;states_needed: &#96;&#96;  &#96;&#96;best_station &#96;&#96;&#x3D;&#96; &#96;None&#96;&#96;  &#96;&#96;states_covered &#96;&#96;&#x3D;&#96; &#96;set&#96;&#96;() &#96;&#96;  &#96;&#96;for&#96; &#96;station, states &#96;&#96;in&#96; &#96;stations.items(): &#96;&#96;    &#96;&#96;covered &#96;&#96;&#x3D;&#96; &#96;states_needed &amp; states &#96;&#96;    &#96;&#96;if&#96; &#96;len&#96;&#96;(covered) &gt; &#96;&#96;len&#96;&#96;(states_covered): &#96;&#96;      &#96;&#96;best_station &#96;&#96;&#x3D;&#96; &#96;station &#96;&#96;      &#96;&#96;states_covered &#96;&#96;&#x3D;&#96; &#96;covered  &#96; &#96;states_needed &#96;&#96;-&#96;&#96;&#x3D;&#96; &#96;states_covered &#96;&#96;finalstations.add(beststation)  </span><br></pre></td></tr></table></figure>
+<p>　　 最后，你打印final_stations，结果类似于下面这样。<br>　　&gt;&gt;&gt; print final_stations<br>　　set([‘ktwo’, ‘kthree’, ‘kone’, ‘kfive’])<br>　　结果符合你的预期吗？选择的广播台可能是2、3、4和5，而不是预期的1、2、3和5。下面来比较一下贪婪算法和精确算法的运行时间。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104171323567-1155864300.png"
+                      alt="img"
+                ></p>
+<p> 注：快速排序属于分治算法，广度优先搜索和狄克斯特拉算法属于贪婪算法。</p>
+<h2 id="2-1-NP-完全问题"><a href="#2-1-NP-完全问题" class="headerlink" title="2.1 NP 完全问题"></a>2.1 NP 完全问题</h2><p>　　为解决集合覆盖问题，你必须计算每个可能的集合。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104172914804-1250493792.png"
+                      alt="img"
+                ></p>
+<p>　　这可能让你想起了旅行商问题。在这个问题中，旅行商需要前往5个不同的城市。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104173144261-2038883313.png"
+                      alt="img"
+                ></p>
+<p>　　他需要找出前往这5个城市的最短路径，为此，必须计算每条可能的路径。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104173226217-1865829439.png"
+                      alt="img"
+                ></p>
+<p>　　前往5个城市时，可能的路径有多少条呢？</p>
+<h3 id="旅行商问题详解"><a href="#旅行商问题详解" class="headerlink" title="旅行商问题详解:"></a>旅行商问题详解:</h3><p>　　我们从城市数较少的情况着手。假设只涉及两个城市，因此可供选择的路线有两条。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104173407124-18714690.png"
+                      alt="img"
+                ></p>
+<p>　　<strong>这两条路线相同还是不同?</strong></p>
+<p>　　你可能认为这两条路线相同，难道从旧金山到马林的距离与从马林到旧金山的距离不同吗？不一定。有些城市（如旧金山）有很多单行线，因此你无法按原路返回。你可能需要离开原路行驶一两英里才能找到上高速的匝道。因此，这两条路线不一定相同。</p>
+<p>　　你可能心存疑惑：在旅行商问题中，必须从特定的城市出发吗？例如，假设我是旅行商。我居住在旧金山，需要前往其他4个城市，因此我将从旧金山出发。</p>
+<p>　　但有时候，不确定要从哪个城市出发。假设联邦快递将包裹从芝加哥发往湾区，包裹将通过航运发送到联邦快递在湾区的50个集散点之一，再装上经过不同配送点的卡车。该通过航运发送到哪个集散点呢？在这个例子中，起点就是未知的。因此，你需要通过计算为旅行商找出起点和最佳路线。</p>
+<p>　　在这两种情况下，运行时间是相同的。但出发城市未定时更容易处理，因此这里以这种情况为例。</p>
+<p>　　涉及两个城市时，可能的路线有两条。</p>
+<p>　　现在假设再增加一个城市，可能的路线有多少条呢？如果从伯克利出发，就需前往另外两个城市。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104173727005-981559710.png"
+                      alt="img"
+                ></p>
+<p>　　从每个城市出发时，都有两条不同的路线，因此总共有6条路线。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104173810449-1661773052.png"
+                      alt="img"
+                ></p>
+<p>　　因此涉及3个城市时，可能的路线有6条。</p>
+<p>　　我们再增加一个城市——弗里蒙特。现在假设从弗里蒙特出发。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104173857311-1107799382.png"
+                      alt="img"
+                ></p>
+<p>　　从弗里蒙特出发时，有6条可能的路线。这些路线与前面只有3个城市时计算的6条路线很像，只是现在所有的路线都多了一个城市——弗里蒙特！这里有一个规律。假设有4个城市，你选择一个出发城市——弗里蒙特后，还余下3个城市。而你知道，涉及3个城市时，可能的路线有6条。从弗里蒙特出发时，有6条可能的路线，但还可以从其他任何一个城市出发。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104174851244-1868602611.png"
+                      alt="img"
+                ></p>
+<p>　　可能的出发城市有4个，从每个城市出发时都有6条可能的路线，因此可能的路线有4 × 6 = 24条。你看出规律了吗？每增加一个城市，需要计算的路线数都将增加。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104174945344-1476164878.png"
+                      alt="img"
+                ></p>
+<p>　　涉及6个城市时，可能的路线有多少条呢？如果你说720条，那就对了。7个城市为5040条，8个城市为40320条。</p>
+<p>　　这被称为阶乘函数（factorial function），假设有10个城市，可能的路线有多少条呢？10! = 3 628 800。换句话说，涉及10个城市时，需要计算的可能路线超过300万条。正如你看到的，可能的路线数增加得非常快！因此，如果涉及的城市很多，根本就无法找出旅行商问题的正确解。</p>
+<p>　　旅行商问题和集合覆盖问题有一些共同之处：你需要计算所有的解，并从中选出最小/最短的那个。这两个问题都属于NP完全问题。</p>
+<p><strong>近似求解:</strong></p>
+<p>　　对旅行商问题来说，什么样的近似算法不错呢？能找到较短路径的算法就算不错。在继续往下阅读前，看看你能设计出这样的算法吗？</p>
+<p>　　我会采取这样的做法：随便选择出发城市，然后每次选择要去的下一个城市时，都选择还没去的最近的城市。假设旅行商从马林出发。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104175302022-1681617029.png"
+                      alt="img"
+                ></p>
+<p>　　总旅程为71英里。这条路径可能不是最短的，但也相当短了。</p>
+<p>　　NP完全问题的简单定义是，以难解著称的问题，如旅行商问题和集合覆盖问题。很多非常聪明的人都认为，根本不可能编写出可快速解决这些问题的算法。</p>
+<h2 id="2-2-如何识别-NP-完全问题"><a href="#2-2-如何识别-NP-完全问题" class="headerlink" title="2.2 如何识别 NP 完全问题"></a>2.2 如何识别 NP 完全问题</h2><p>　　Jonah正为其虚构的橄榄球队挑选队员。他列了一个清单，指出了对球队的要求：优秀的四分卫，优秀的跑卫，擅长雨中作战，以及能承受压力等。他有一个候选球员名单，其中每个球员都满足某些要求。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104175530468-307544311.png"
+                      alt="img"
+                ></p>
+<p>　　Jonah需要组建一个满足所有这些要求的球队，可名额有限。等等，Jonah突然间意识到，这不就是一个集合覆盖问题吗！<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104175610938-1170024570.png"
+                      alt="img"
+                ></p>
+<p>　　Jonah可使用前面介绍的近似算法来组建球队。</p>
+<p>　　(1) 找出符合最多要求的球员。</p>
+<p>　　(2) 不断重复这个过程，直到球队满足要求（或球队名额已满）。</p>
+<p>　　NP完全问题无处不在！如果能够判断出要解决的问题属于NP完全问题就好了，这样就不用去寻找完美的解决方案，而是使用近似算法即可。但要判断问题是不是NP完全问题很难，易于解决的问题和NP完全问题的差别通常很小。例如，前一章深入讨论了最短路径，你知道如何找出从A点到B点的最短路径。<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img2018.cnblogs.com/blog/1286166/201811/1286166-20181104175811110-73485942.png"
+                      alt="img"
+                ></p>
+<p>　　但如果要找出经由指定几个点的的最短路径，就是旅行商问题——NP完全问题。简言之，没办法判断问题是不是NP完全问题，但还是有一些蛛丝马迹可循的。</p>
+<ul>
+<li>元素较少时算法的运行速度非常快，但随着元素数量的增加，速度会变得非常慢。</li>
+<li>涉及“所有组合”的问题通常是NP完全问题。</li>
+<li>不能将问题分成小问题，必须考虑各种可能的情况。这可能是NP完全问题。</li>
+<li>如果问题涉及序列（如旅行商问题中的城市序列）且难以解决，它可能就是NP完全问题。</li>
+<li>如果问题涉及集合（如广播台集合）且难以解决，它可能就是NP完全问题。</li>
+<li>如果问题可转换为集合覆盖问题或旅行商问题，那它肯定是NP完全问题。</li>
+</ul>
+<p><strong>练习：</strong></p>
+<p>1.有个邮递员负责给20个家庭送信，需要找出经过这20个家庭的最短路径。请问这是一个NP完全问题吗？是的<br>2.在一堆人中找出最大的朋友圈（即其中任何两个人都相识）是NP完全问题吗？是的<br>3.你要制作美国地图，需要用不同的颜色标出相邻的州。为此，你需要确定最少需要使用多少种颜色，才能确保任何两个相邻州的颜色都不同。请问这是NP完全问题吗？是的</p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><ul>
+<li>贪婪算法寻找局部最优解，企图以这种方式获得全局最优解。</li>
+<li>对于NP完全问题，还没有找到快速解决方案。</li>
+<li>面临NP完全问题时，最佳的做法是使用近似算法。</li>
+<li>贪婪算法易于实现、运行速度快，是不错的近似算法。</li>
 </ul>
 ]]></content>
   </entry>
